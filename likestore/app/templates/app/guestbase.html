@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if !IE]><!--> <html xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->  
 <head>
     <title>Like Gifts | Welcome...</title>
 
@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{% static 'assets/plugins/ladda-buttons/css/custom-lada-btn.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/plugins/hover-effect/css/custom-hover-effects.css' %}">   
     <link rel="stylesheet" href="{% static 'assets/plugins/fancybox/source/jquery.fancybox.css' %}"> 
+  
 
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="css/sky-forms-ie8.css">
@@ -52,25 +53,11 @@
 <i class="style-switcher-btn fa fa-cogs hidden-xs"></i>
 <div class="style-switcher animated fadeInRight">
     <div class="theme-close"><i class="icon-close"></i></div>
-    <div class="theme-heading">Theme Colors</div>
-    <ul class="list-unstyled">
-        <li class="theme-default theme-active" data-style="default" data-header="light"></li>
-        <li class="theme-blue" data-style="blue" data-header="light"></li>
-        <li class="theme-orange" data-style="orange" data-header="light"></li>
-        <li class="theme-red" data-style="red" data-header="light"></li>
-        <li class="theme-light last" data-style="light" data-header="light"></li>
-
-        <li class="theme-purple" data-style="purple" data-header="light"></li>
-        <li class="theme-aqua" data-style="aqua" data-header="light"></li>
-        <li class="theme-brown" data-style="brown" data-header="light"></li>
-        <li class="theme-dark-blue" data-style="dark-blue" data-header="light"></li>
-        <li class="theme-light-green last" data-style="light-green" data-header="light"></li>
-    </ul>
     <div style="margin-bottom:18px;"></div>
     <div class="theme-heading">Layouts</div>
     <div class="text-center">
         <a href="javascript:void(0);" class="btn-u btn-u-green btn-block active-switcher-btn wide-layout-btn">Wide</a>
-        <a href="#" class="btn-u btn-u-green btn-block boxed-layout-btn">Boxed</a>
+        <a href="javascript:void(0);" class="btn-u btn-u-green btn-block boxed-layout-btn">Boxed</a>
     </div>
 </div><!--/style-switcher-->
 <!--=== End Style Switcher ===-->    
@@ -96,45 +83,46 @@
                     <li class="topbar-devider"></li>   
                     <li><a href="">HOW IT WORKS</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href="">Browse{{ request.session.user }}</a></li>  
-                    <li class="topbar-devider"></li> 
-                    {%if request.session.user %}  
+                    <li><a href="">Browse</a></li>  
+                    <li class="topbar-devider"></li>   
+                   {%if request.session.user %}  
                     <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogout">LogOut</a></li>  
                     {%else%} 
-                    <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogin">LogIn</a></li> 
-                    {% endif %}
+                    <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogin">Resiter/LogIn</a></li> 
+                    {% endif %}    
                 </ul>
                 <!-- End Topbar Navigation -->
             </div>
-            <div class="container">
+            <div class="container content">
                 <!-- Topbar Navigation -->
-                <ul class="loginbar pull-left">
-                    <li>
+                <ul class="loginbar">
+                    <li class="col-md-offset-3 pull-left">
                         <select class="form-control">
                             <option value="none" selected disabled>Product</option>
-                            <option value="design">design</option>
-                            <option value="development">development</option>
-                            <option value="illustration">illustration</option>
-                            <option value="branding">branding</option>
-                            <option value="video">video</option>
+                            <option>Product 1</option>
+                            <option>Product x</option>
+                            <option>Product x</option>
+                            <option>Product x</option>
+                            <option>Product x</option>
                         </select>
                     </li>
-                     <!-- Search Block -->
-                        <li>
-                            <i class="search fa fa-search search-btn"></i>
-                            <div class="search-open">
-                                <div class="input-group animated fadeInDown">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button class="btn-u" type="button">Go</button>
-                                    </span>
-                                </div>
-                            </div>    
-                        </li>
-                        <!-- End Search Block -->  
-                </ul>
-                <ul class="loginbar pull-right">
-                    <button class="btn-u btn-brd rounded-4x btn-u-green btn-u-sm" type="button"><i class="fa fa-shopping-cart"></i> RUB 8800</button>  
+                    <li>
+                        <section class="col col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ...">
+                                <span class="input-group-btn">
+                                    <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="pull-right">
+                        <button class="btn-u btn-brd rounded-4x btn-u-green btn-u-sm" type="button">
+                            <span class="badge badge-green rounded-x">3</span>
+                            <i class="fa fa-shopping-cart"></i> RUB 8800
+                        </button>
+                       
+                    </li>
                 </ul>
                 <!-- End Topbar Navigation -->
             </div>
@@ -160,82 +148,82 @@
                     <ul class="nav navbar-nav">
                         <!-- Home -->
                         <li class="active">
-                            <a href="/gifts">
+                            <a>
                                 SPA
                             </a>
                         </li>
                         <!-- End Home -->
                         <!-- Pages -->                        
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 DINING
                             </a>
                         </li>
                         <!-- End Pages -->
                         <!-- Features -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 APPAREL
                             </a>
                         </li>
                         <!-- End Features -->
                         <!-- Portfolio -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 GETAWAYS
                             </a>
                         </li>
                         <!-- Ens Portfolio -->
                         <!-- Blog -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 ACTIVITIES
                             </a>
                         </li>
                         <!-- End Blog -->
                         <!-- Contacts -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 ADVENTURE
                             </a>
                         </li>   
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 LIFESTYLE
                             </a>
                         </li>
                         <!-- End Home -->
                         <!-- Pages -->                        
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 HOME
                             </a>
                         </li>
                         <!-- End Pages -->
                         <!-- Features -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 FASHION
                             </a>
                         </li>
                         <!-- End Features -->
                         <!-- Portfolio -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 SPECIAL TREAT
                             </a>
                         </li>
                         <!-- Ens Portfolio -->
                         <!-- Blog -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 KIDS
                             </a>
                         </li>
                         <!-- End Blog -->
                         <!-- Contacts -->
                         <li>
-                            <a href="/gifts">
+                            <a>
                                 SHOWS
                             </a>
                         </li>                  
@@ -247,6 +235,8 @@
         <!-- End Navbar -->
     </div>
     <!--=== End Header ===-->    
+
+    </div><!--/container-->   
 {% block content %}{% endblock %}
 
     <!--=== Footer ===-->
@@ -416,6 +406,7 @@
 <script type="text/javascript" src="{% static 'assets/js/forms/order.js' %}"></script>
 <script type="text/javascript" src="{% static 'assets/js/forms/review.js' %}"></script>
 <script type="text/javascript" src="{% static 'assets/js/forms/checkout.js' %}"></script>
+ <script type="text/javascript" src="{% static 'assets/js/plugins/form-sliders.js' %}"></script>
 
 <script type="text/javascript">
     jQuery(document).ready(function() {
@@ -424,7 +415,7 @@
         App.initParallaxBg();
         OwlCarousel.initOwlCarousel();
         App.initFancybox(); 
-
+        FormSliders.initFormSliders();
         OrderForm.initOrderForm();        
         ReviewForm.initReviewForm();        
         CheckoutForm.initCheckoutForm(); 

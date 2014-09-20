@@ -12,6 +12,7 @@ from app.forms import *
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, authenticate, login
+from app.models import *
 
 class LoginForm(forms.Form):
     username=forms.EmailField()
@@ -73,20 +74,20 @@ def userlogin(request):
                     return HttpResponseRedirect('/sendgift')
                 else:
                     template=loader.get_template("app/page_login.html")
-                    rc=RequestContext(request,{'username':'Your account has been disabled!'})
+                    rc=RequestContext(request,{'message':'Your account has been disabled!'})
                     return HttpResponse(template.render(rc))
                     
              else:
                 template=loader.get_template("app/page_login.html")
-                rc=RequestContext(request,{'username':'Please do sigh up first'})
+                rc=RequestContext(request,{'message':'Please do sigh up first'})
                 return HttpResponse(template.render(rc))
          else:
            template=loader.get_template("app/page_login.html")
-           rc=RequestContext(request,{'username':'Email or password not validate'})
+           rc=RequestContext(request,{'message':'Email or password not validate'})
            return HttpResponse(template.render(rc))
     else:
         template=loader.get_template("app/page_login.html")
-        rc=RequestContext(request,{'username':''})
+        rc=RequestContext(request,{'message':''})
         return HttpResponse(template.render(rc))
 
 
@@ -106,6 +107,7 @@ def usersignup(request):
         if new_user is not None:
             if new_user.is_active:
                 login(request, new_user)
+                request.session['user'] = new_user.id
                 return HttpResponseRedirect('/sendgift')
             else:
                 request.session['err_data'] = "Your account has been disabled!"
@@ -115,7 +117,7 @@ def usersignup(request):
             return HttpResponseRedirect('/usersignup')
     else:
      template=loader.get_template("app/page_registration.html")
-     rc=RequestContext(request,{'username':''})
+     rc=RequestContext(request,{'message':''})
      return HttpResponse(template.render(rc))
 
 

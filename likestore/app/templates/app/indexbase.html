@@ -50,24 +50,10 @@
 </head> 
 
 <body>
-  <!--=== Style Switcher ===-->    
+<!--=== Style Switcher ===-->    
 <i class="style-switcher-btn fa fa-cogs hidden-xs"></i>
 <div class="style-switcher animated fadeInRight">
     <div class="theme-close"><i class="icon-close"></i></div>
-    <div class="theme-heading">Theme Colors</div>
-    <ul class="list-unstyled">
-        <li class="theme-default theme-active" data-style="default" data-header="light"></li>
-        <li class="theme-blue" data-style="blue" data-header="light"></li>
-        <li class="theme-orange" data-style="orange" data-header="light"></li>
-        <li class="theme-red" data-style="red" data-header="light"></li>
-        <li class="theme-light last" data-style="light" data-header="light"></li>
-
-        <li class="theme-purple" data-style="purple" data-header="light"></li>
-        <li class="theme-aqua" data-style="aqua" data-header="light"></li>
-        <li class="theme-brown" data-style="brown" data-header="light"></li>
-        <li class="theme-dark-blue" data-style="dark-blue" data-header="light"></li>
-        <li class="theme-light-green last" data-style="light-green" data-header="light"></li>
-    </ul>
     <div style="margin-bottom:18px;"></div>
     <div class="theme-heading">Layouts</div>
     <div class="text-center">
@@ -92,7 +78,7 @@
                     <li><a href=""><i class="fa fa-envelope-o fa-fw"></i>support@likegift.ru</a></li>  
                 </ul>
                 <ul class="loginbar pull-right">
-                    <li><a href="">SEND GIFT</a></li>  
+                    <li><a href="/howitworks">SEND GIFT</a></li>  
                     <li class="topbar-devider"></li>   
                     <li><a href="">RECEIVE GIFT</a></li>  
                     <li class="topbar-devider"></li>   
@@ -100,47 +86,57 @@
                     <li class="topbar-devider"></li>   
                     <li><a href="">Browse</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogin">Login / REGISTER</a></li>   
+                     {%if request.session.user %}  
+                    <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogout">LogOut</a></li>  
+                    {%else%} 
+                    <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogin">Resiter/LogIn</a></li> 
+                    {% endif %}  
                 </ul>
                 <!-- End Topbar Navigation -->
             </div>
-            <div class="container">
+            <div class="container content">
                 <!-- Topbar Navigation -->
-                <ul class="loginbar pull-left">
-                    <li>
+                <ul class="loginbar">
+                    <li class="col-md-offset-3 pull-left">
                         <select class="form-control">
                             <option value="none" selected disabled>Product</option>
-                            <option value="design">design</option>
-                            <option value="development">development</option>
-                            <option value="illustration">illustration</option>
-                            <option value="branding">branding</option>
-                            <option value="video">video</option>
+                            <option>Product 1</option>
+                            <option>Product x</option>
+                            <option>Product x</option>
+                            <option>Product x</option>
+                            <option>Product x</option>
                         </select>
                     </li>
-                     <!-- Search Block -->
-                        <li>
-                            <i class="search fa fa-search search-btn"></i>
-                            <div class="search-open">
-                                <div class="input-group animated fadeInDown">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button class="btn-u" type="button">Go</button>
-                                    </span>
-                                </div>
-                            </div>    
-                        </li>
-                        <!-- End Search Block -->  
-                </ul>
-                <ul class="loginbar pull-right">
-                    <button class="btn-u btn-brd rounded-4x btn-u-green btn-u-sm" type="button"><i class="fa fa-shopping-cart"></i> RUB 8800</button>  
+                    <li>
+                        <section class="col col-md-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search ...">
+                                <span class="input-group-btn">
+                                    <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </section>
+                    </li>
+                    <li class="pull-right">
+                        <button class="btn-u btn-brd rounded-4x btn-u-green btn-u-sm" type="button" data-toggle="modal" data-target="#receivegift">
+                            <span class="badge badge-green rounded-x">3</span>
+                            <i class="fa fa-shopping-cart"></i> RUB 8800
+                        </button>
+                       
+                    </li>
                 </ul>
                 <!-- End Topbar Navigation -->
+
+              
+
             </div>
+
         </div>
         <!-- End Topbar -->
+
     
         <!-- Navbar -->
-        <div class="navbar navbar-default" role="navigation">
+        <div class="navbar navbar-inverse" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -149,122 +145,64 @@
                         <span class="fa fa-bars"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        <img id="logo-header" src="{% static 'assets/img/logo1-default.png' %}" alt="Logo">
+                        <i id="logo-header" class="fa fa-home fa-3x active color-light" alt="Logo"></i>
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <div class="collapse navbar-collapse navbar-responsive-collapse pull-left">
                     <ul class="nav navbar-nav">
                         <!-- Home -->
-                        <li class="dropdown active">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <li class="topbar-devider"></li>  
+                        <li>
+                            <a>
                                 OCCATION
                             </a>
-                             <ul class="dropdown-menu">
-                                <li><a href="portfolio_text_blocks.html">O1</a></li>
-                                <li><a href="portfolio_2_column.html">O2</a></li>
-                                <li><a href="portfolio_3_column.html">O3</a></li>
-                                <li><a href="portfolio_4_column.html">O4</a></li>
-                                <li><a href="portfolio_item.html">O5</a></li>
-                                <li><a href="portfolio_item1.html">O6</a></li>
-                            </ul> 
                         </li>
                         <!-- End Home -->
 
                         <!-- Pages -->                        
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <li>
+                            <a>
                                 CATEGORY
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="portfolio_text_blocks.html">C1</a></li>
-                                <li><a href="portfolio_2_column.html">C2</a></li>
-                                <li><a href="portfolio_3_column.html">C3</a></li>
-                                <li><a href="portfolio_4_column.html">C4</a></li>
-                                <li><a href="portfolio_item.html">C5</a></li>
-                                <li><a href="portfolio_item1.html">C6</a></li>
-                            </ul> 
                         </li>
                         <!-- End Pages -->
 
                         <!-- Features -->
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <li>
+                            <a>
                                 FOR MAN
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="portfolio_text_blocks.html">MC1</a></li>
-                                <li><a href="portfolio_2_column.html">MC2</a></li>
-                                <li><a href="portfolio_3_column.html">MC3</a></li>
-                                <li><a href="portfolio_4_column.html">MC4</a></li>
-                                <li><a href="portfolio_item.html">MC5</a></li>
-                                <li><a href="portfolio_item1.html">MC6</a></li>
-                            </ul> 
                         </li>
                         <!-- End Features -->
 
                         <!-- Portfolio -->
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                        <li>
+                            <a>
                                 FOR WOMAN
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="portfolio_text_blocks.html">FC1</a></li>
-                                <li><a href="portfolio_2_column.html">FC2</a></li>
-                                <li><a href="portfolio_3_column.html">FC3</a></li>
-                                <li><a href="portfolio_4_column.html">FC4</a></li>
-                                <li><a href="portfolio_item.html">FC5</a></li>
-                                <li><a href="portfolio_item1.html">FC6</a></li>
-                            </ul> 
+                          
                         </li>
                         <!-- Ens Portfolio -->
 
                         <!-- Blog -->
                         <li>
-                            <a onclick="javascript:sendgift();" class="dropdown-toggle" data-toggle="dropdown">
+                            <a>
                                 SEND GIFT
                             </a>
-                            <!-- <ul class="dropdown-menu">
-                                <li><a href="blog_page.html">Blog Page</a></li>
-                                <li><a href="blog_large.html">Blog Large</a></li>
-                                <li><a href="blog_medium.html">Blog Medium</a></li>
-                                <li><a href="blog_full_width.html">Blog Full Width</a></li>
-                                <li><a href="blog_timeline.html">Blog Timeline</a></li>
-                                <li><a href="blog_right_sidebar.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog_left_sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog_item_option1.html">Blog Item Option 1</a></li>
-                                <li><a href="blog_item_option2.html">Blog Item Option 2</a></li>
-                            </ul> -->
+                         
                         </li>
                         <!-- End Blog -->
 
                         <!-- Contacts -->
                         <li>
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            <a>
                                 REDEEM GIFT
                             </a>
-                           <!--  <ul class="dropdown-menu">
-                                <li><a href="page_contact1.html">Contacts Default</a></li>
-                                <li><a href="page_contact2.html">Contacts Option 1</a></li>
-                                <li><a href="page_contact3.html">Contacts Option 2</a></li>
-                            </ul> -->
+                           
                         </li>                    
-                        <!-- End Contacts -->
-
-                        <!-- Search Block -->
-                       <!--  <li>
-                            <i class="search fa fa-search search-btn"></i>
-                            <div class="search-open">
-                                <div class="input-group animated fadeInDown">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-btn">
-                                        <button class="btn-u" type="button">Go</button>
-                                    </span>
-                                </div>
-                            </div>    
-                        </li> -->
-                        <!-- End Search Block -->
+                      
                     </ul>
                 </div><!--/navbar-collapse-->
             </div>    
@@ -272,9 +210,46 @@
         <!-- End Navbar -->
     </div>
     <!--=== End Header ===-->    
+
+
+      <div class="modal fade" id="receivegift" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                   
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="headline"><h4>How to Redeem?</h4></div>
+                                           <p>Lorem ipsum dolor. Visit our website and enter your gift code. Choose a merchant / partner brand to redeem your gift voucher at. Generate a gift code for your selected partner brand and follow the steps shown on the screen to redeem. <br>
+                                                Reservation required for restaurants, spa and all activities. Call us to make a reservation. Bring the gift voucher to the partner brand to redeem.</p>
+                                                <h6 class="color-green"><i class="fa fa-exclamation-circle fa-1x"></i>need help?</h6>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h4 class="color-green" style="margin-top: 200px;">Got a Gift Card?</h4>
+                                                <p>Enter your code here:</p>
+                                                <p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter your code here">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn-u" type="button">SUBMIT</button>
+                                                            </span>
+                                                    </div>
+                                                </p>
+                                                <P>Lost your gift voucher? Call us at <span class="color-green">+88124/5678</span></P>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="modal-footer">
+                                        <button type="button" class="btn-u btn-u-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn-u btn-u-primary">Save changes</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
 {% block content %}{% endblock %}
       
-    <!--=== Footer ===-->
+<!--=== Footer ===-->
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -339,7 +314,7 @@
                             </span>
                         </div>                  
                     </form> 
-                    <ul class="social-icons">
+                    <ul class="social-icons" style="margin-top: 15px;">
                         <!-- <li><a href="#" data-original-title="Feed" class="social_rss"></a></li> -->
                         <li><a href="#" data-original-title="Linkedin" class="social_linkedin"></a></li>
                         <li><a href="#" data-original-title="Facebook" class="social_facebook"></a></li>
@@ -401,7 +376,7 @@
                 </div>
                 <div class="col-md-6">  
                     <a href="index.html">
-                        <img id="logo-footer" src="{% static 'assets/img/logo1-default.png' %}" class="pull-right" alt="" />
+                        <img id="logo-footer" src="assets/img/logo1-default.png" class="pull-right" alt="" />
                     </a>
                 </div>
             </div>

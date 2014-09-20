@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^userlogin', userlogin, name='userlogin'),
     url(r'^userlogout', userlogout, name='userlogout'),
     url(r'^usersignup', usersignup, name='usersignup'),
+    url(r'^howitworks', howitworks, name='howitworks'),
   
     url(r'^gifts/(?P<cat>\w{0,2})/$', gifts_1, name='gifts_1'),
     

@@ -3,7 +3,7 @@ Definition of models.
 """
 
 from django.db import models
-from django.contrib.auth.models import UserManager
+from django.contrib.auth.models import *
 
 # Create your models here.
 
@@ -14,7 +14,6 @@ class Optiongroups(models.Model):
     optiongroupname = models.CharField(db_column='OptionGroupName', max_length=50, blank=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'optiongroups'
 
 
@@ -24,7 +23,6 @@ class Options(models.Model):
     optionname = models.CharField(db_column='OptionName', max_length=50, blank=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'options'
 
 
@@ -38,7 +36,6 @@ class Orderdetails(models.Model):
     detailquantity = models.IntegerField(db_column='DetailQuantity')  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'orderdetails'
 
 
@@ -63,7 +60,6 @@ class Orders(models.Model):
     ordertrackingnumber = models.CharField(db_column='OrderTrackingNumber', max_length=80, blank=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'orders'
 
 
@@ -75,7 +71,6 @@ class Payments(models.Model):
     paymentstatus = models.IntegerField(db_column='PaymentStatus', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'payments'
 
 
@@ -84,7 +79,6 @@ class Productcategories(models.Model):
     categoryname = models.CharField(db_column='CategoryName', max_length=50)  #Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'productcategories'
 
 
@@ -96,7 +90,6 @@ class Productoptions(models.Model):
     optiongroupid = models.IntegerField(db_column='OptionGroupID')  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'productoptions'
 
 
@@ -120,7 +113,6 @@ class Products(models.Model):
     productlocation = models.CharField(db_column='ProductLocation', max_length=250, blank=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'products'
 
 
@@ -144,5 +136,4 @@ class Users(models.Model):
     useraddress2 = models.CharField(db_column='UserAddress2', max_length=50, blank=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
         db_table = 'users'

@@ -2,21 +2,44 @@
 
 {% block content %}
 {% load staticfiles %}
-    <!--=== Search Block ===-->
+   <!--=== Search Block ===-->
     <div class="search-block parallaxBg">
         <div class="container">
             <div class="col-md-7 col-md-offset-3">
                 <h1>Welcome to the <span class="color-green">Home of Gifts</span></h1>
                 <h4><span class="color-light">find and send gifts to your friends and family</span></h4>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search words with regular expressions ...">
-                    <span class="input-group-btn">
-                        <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
-                <h6><span class="color-light">Over 8k gift suggestions, from the likes of a cup of coffee, to 
-                    <span class="color-green">household goods,</span> groceries and even automobiles.</span></h6>
-                
+                <div class="row">
+                            <section class="col col-md-5">
+                                <select class="form-control">
+                                    <option value="none" selected disabled>By Occassions</option>
+                                    <option>Birth DAy</option>
+                                    <option>Anniversary</option>
+                                    <option>Marriage</option>
+                                    <option>Valentine's day</option>
+                                    <option>Raksha Bandhan</option>
+                                </select>
+                            </section>
+                            <section class="col col-md-5">
+                                <select class="form-control">
+                                    <option value="0" selected="" disabled="">Select Relationship ...</option>
+                                    <option>Brother</option>
+                                    <option>Sister</option>
+                                    <option>Family</option>
+                                    <option>Girl Friend</option>
+                                    <option>Boy Friend</option>
+                                </select>
+                            </section>
+                            <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                        </div>
+                        
+                <h6>
+                    <span class="color-light">Over 8k gift suggestions, from the likes of a cup of coffee, to 
+                    <span class="color-green">household goods,</span> groceries and even automobiles.</span>
+                </h6>
             </div>
         </div>    
     </div><!--/container-->     
@@ -27,7 +50,6 @@
         <!-- Begin Service Block -->
                <div class="title-box-v2">
             <h1><b>How it Works</b></h1>
-                  <hr class="small">
             <p>We make gifting a simple task</p>
         </div>
         <div class="row margin-bottom-40">
@@ -93,6 +115,8 @@
             </div>
         </div>    
         <!-- End Service Block -->
+    </div><!--/container-->  
+
 
       <!--=== Download Block ===-->
     <div class="purchase">
@@ -105,19 +129,19 @@
                         <br>Only takes a minute to register. Lorem ipsum dolor sit amet.</p>
                 </div>            
                 <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="#" class="btn-u btn-u-lg btn-android"><i class="fa fa-sign-in"></i> Register Now</a>
+                    <a href="#" class="btn-u btn-u-lg btn-u-light-green"><i class="fa fa-sign-in"></i> Register Now</a>
                 </div>
             </div>
         </div>
     </div><!--/row-->
     <!-- End Download Block -->
-    </div><!--/container-->     
+   
     <!--=== End Content ===-->
 
 
 
     <!--=== Container Part ===-->
-    <div class="container margin-bottom-20">
+    <div class="container content margin-bottom-20">
         <div class="col-md-3">
         <div class="title-box-v2">
             <h2>Top Categories <p>browse gifts by category</p></h2>
@@ -129,12 +153,12 @@
         <div class="row">
                     <div class="col-md-4">
                         <!-- <div class="thumbnail"> -->
-                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #1" href="#">
-                                <span class="overlay-zoom"> 
-                                    <img class="img-responsive" src="{% static 'assets/img/top_categories/img1.png' %}" alt="" />
+                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
+                                <span class="overlay-zoom">  
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img1.png' %}" alt="" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
-                            </a>                    
+                            </a>                 
                             <div class="caption">
                                 <h3>Automative</h3>
                                 <a class="hover-effect" href="#">Car accesorries, Car fresheners, etc</a>
@@ -143,12 +167,12 @@
                     </div>
                     <div class="col-md-4">
                         <!-- <div class="thumbnail"> -->
-                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="assets/img/top_categories/img2.png">
-                                <span class="overlay-zoom">   
+                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
+                                <span class="overlay-zoom">  
                                     <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
-                            </a>                    
+                            </a>                   
                             <div class="caption">
                                 <h3>Entertainment</h3>
                                 <a class="hover-effect" href="#">music, movie, book, merchandise, etc</a>
@@ -157,12 +181,12 @@
                     </div>
                     <div class="col-md-4">
                         <!-- <div class="thumbnail"> -->
-                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="assets/img/top_categories/img3.png">
+                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
                                 <span class="overlay-zoom">  
                                     <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img3.png' %}" alt="" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
-                            </a>                    
+                            </a>                     
                             <div class="caption">
                                 <h3>Entertainment</h3>
                                 <a class="hover-effect" href="#">music, movie, book, merchandise, etc</a>
@@ -176,7 +200,21 @@
                                     <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
-                            </a>                    
+                            </a>                     
+                            <div class="caption">
+                                <h3>Entertainment</h3>
+                                <a class="hover-effect" href="#">music, movie, book, merchandise, etc</a>
+                            </div>
+                        <!-- </div> -->
+                    </div>
+                    <div class="col-md-4">
+                        <!-- <div class="thumbnail"> -->
+                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
+                                <span class="overlay-zoom">  
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img5.png' %}" alt="" />
+                                    <span class="zoom-icon"></span>                   
+                                </span>                                              
+                            </a>                     
                             <div class="caption">
                                 <h3>Entertainment</h3>
                                 <a class="hover-effect" href="#">music, movie, book, merchandise, etc</a>
@@ -190,21 +228,7 @@
                                     <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
-                            </a>                    
-                            <div class="caption">
-                                <h3>Entertainment</h3>
-                                <a class="hover-effect" href="#">music, movie, book, merchandise, etc</a>
-                            </div>
-                        <!-- </div> -->
-                    </div>
-                    <div class="col-md-4">
-                        <!-- <div class="thumbnail"> -->
-                            <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
-                                <span class="overlay-zoom">  
-                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
-                                    <span class="zoom-icon"></span>                   
-                                </span>                                              
-                            </a>                    
+                            </a>                       
                             <div class="caption">
                                 <h3>Entertainment</h3>
                                 <a class="hover-effect" href="#">music, movie, book, merchandise, etc</a>
@@ -252,7 +276,7 @@
     <div class="parallax-counter parallaxBg ">
 <!-- Owl Carousel v2 -->
                 <div class="owl-carousel-v2 owl-carousel-style-v1 margin-bottom-50">
-                    <div class="owl-slider-v2">
+                   <div class="owl-slider-v2">
                         <div class="item">
                             <img class="img-responsive" src="{% static 'assets/img/clients2/baderbrau.png' %}" alt="">
                         </div>
@@ -291,4 +315,9 @@
                 </div>    
                 <!-- End Owl Carousel v2 --> 
     </div>    
+    <!--=== End Parallax Counter ===-->
+
+
+   
+    <!--=== Container Part ===-->
 {% endblock %}
