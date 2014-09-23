@@ -85,9 +85,9 @@
                     <li class="topbar-devider"></li>   
                     <li><a href="">Browse</a></li>  
                     <li class="topbar-devider"></li>   
-                   {%if request.session.user %}  
+                   {% if request.session.user %}  
                     <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogout">LogOut</a></li>  
-                    {%else%} 
+                    {% else %} 
                     <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogin">Resiter/LogIn</a></li> 
                     {% endif %}    
                 </ul>
@@ -117,7 +117,7 @@
                         </section>
                     </li>
                     <li class="pull-right">
-                        <button class="btn-u btn-brd rounded-4x btn-u-green btn-u-sm" type="button">
+                        <button class="btn-u btn-brd rounded-4x btn-u-green btn-u-sm" type="button" data-toggle="modal" data-target="#receivegift">
                             <span class="badge badge-green rounded-x">3</span>
                             <i class="fa fa-shopping-cart"></i> RUB 8800
                         </button>
@@ -148,82 +148,82 @@
                     <ul class="nav navbar-nav">
                         <!-- Home -->
                         <li class="active">
-                            <a>
+                            <a href=/gifts/1>
                                 SPA
                             </a>
                         </li>
                         <!-- End Home -->
                         <!-- Pages -->                        
                         <li>
-                            <a>
+                            <a href=/gifts/2>
                                 DINING
                             </a>
                         </li>
                         <!-- End Pages -->
                         <!-- Features -->
                         <li>
-                            <a>
+                            <a href=/gifts/3>
                                 APPAREL
                             </a>
                         </li>
                         <!-- End Features -->
                         <!-- Portfolio -->
                         <li>
-                            <a>
+                            <a href=/gifts/4>
                                 GETAWAYS
                             </a>
                         </li>
                         <!-- Ens Portfolio -->
                         <!-- Blog -->
                         <li>
-                            <a>
+                            <a href=/gifts/4>
                                 ACTIVITIES
                             </a>
                         </li>
                         <!-- End Blog -->
                         <!-- Contacts -->
                         <li>
-                            <a>
+                            <a href=/gifts/5>
                                 ADVENTURE
                             </a>
                         </li>   
                         <li>
-                            <a>
+                            <a href=/gifts/6>
                                 LIFESTYLE
                             </a>
                         </li>
                         <!-- End Home -->
                         <!-- Pages -->                        
                         <li>
-                            <a>
+                            <a href=/gifts/7>
                                 HOME
                             </a>
                         </li>
                         <!-- End Pages -->
                         <!-- Features -->
                         <li>
-                            <a>
+                            <a href=/gifts/8>
                                 FASHION
                             </a>
                         </li>
                         <!-- End Features -->
                         <!-- Portfolio -->
                         <li>
-                            <a>
+                            <a href=/gifts/9>
                                 SPECIAL TREAT
                             </a>
                         </li>
                         <!-- Ens Portfolio -->
                         <!-- Blog -->
                         <li>
-                            <a>
+                            <a href=/gifts/9>
                                 KIDS
                             </a>
                         </li>
                         <!-- End Blog -->
                         <!-- Contacts -->
                         <li>
-                            <a>
+                            <a href=/gifts/10>
                                 SHOWS
                             </a>
                         </li>                  
@@ -234,7 +234,58 @@
         </div>            
         <!-- End Navbar -->
     </div>
-    <!--=== End Header ===-->    
+    <!--=== End Header ===-->  
+   <div class="modal fade" id="receivegift" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                   
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="headline"><h4>How to Redeem?</h4></div>
+                                           <p>Lorem ipsum dolor. Visit our website and enter your gift code. Choose a merchant / partner brand to redeem your gift voucher at. Generate a gift code for your selected partner brand and follow the steps shown on the screen to redeem. <br>
+                                                Reservation required for restaurants, spa and all activities. Call us to make a reservation. Bring the gift voucher to the partner brand to redeem.</p>
+                                                <h6 class="color-green"><i class="fa fa-exclamation-circle fa-1x"></i>need help?</h6>
+                                            </div>
+                                 {%if request.session.user %}  
+                                    <div class="col-md-8">
+                                                <h4 class="color-green" style="margin-top: 200px;">Got a Gift Card?</h4>
+                                                <p>Enter your code here:</p>
+                                                <p>
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="Enter your code here">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn-u" type="button">SUBMIT</button>
+                                                            </span>
+                                                    </div>
+                                                </p>
+                                                <P>Lost your gift voucher? Call us at <span class="color-green">+88124/5678</span></P>
+                                      </div>  
+                                 {%else%} 
+                                     <div class="col-md-8">
+                                                <h4 class="color-green" style="margin-top: 200px;">Got a Gift Card?</h4>
+                                                <p>Please Login First To Read Gift:</p>
+                                                <p>
+                                                    <div class="input-group">
+                                                       <span class="input-group-btn">
+                                                                <a class="btn-u" href="/userlogin">Login</a>
+                                                            </span>
+                                                    </div>
+                                                </p>
+                                                <P>Lost your gift voucher? Call us at <span class="color-green">+88124/5678</span></P>
+                                      </div>  
+                                 {% endif %}  
+                                            
+                                        </div>
+                                    </div>
+                                    <!-- <div class="modal-footer">
+                                        <button type="button" class="btn-u btn-u-default" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn-u btn-u-primary">Save changes</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+  
 
     </div><!--/container-->   
 {% block content %}{% endblock %}

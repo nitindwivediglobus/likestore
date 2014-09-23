@@ -23,28 +23,9 @@ urlpatterns = patterns('',
     url(r'^userlogout', userlogout, name='userlogout'),
     url(r'^usersignup', usersignup, name='usersignup'),
     url(r'^howitworks', howitworks, name='howitworks'),
-  
+    url(r'^gifts', gifts, name='gifts'),
     url(r'^gifts/(?P<cat>\w{0,2})/$', gifts_1, name='gifts_1'),
-    
-   
-    url(r'^login/$',
-        'django.contrib.auth.views.login',
-        {
-            'template_name': 'app/page_login.html',
-            'authentication_form': BootstrapAuthenticationForm,
-            'extra_context':
-            {
-                'title':'Log in',
-                'year':datetime.now().year,
-            }
-        },
-        name='login'),
-    url(r'^logout$',
-        'django.contrib.auth.views.logout',
-        {
-            'next_page': '/',
-        },
-        name='logout'),
+
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

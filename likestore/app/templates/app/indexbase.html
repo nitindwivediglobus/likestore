@@ -224,7 +224,8 @@
                                                 Reservation required for restaurants, spa and all activities. Call us to make a reservation. Bring the gift voucher to the partner brand to redeem.</p>
                                                 <h6 class="color-green"><i class="fa fa-exclamation-circle fa-1x"></i>need help?</h6>
                                             </div>
-                                            <div class="col-md-8">
+                                 {%if request.session.user %}  
+                                    <div class="col-md-8">
                                                 <h4 class="color-green" style="margin-top: 200px;">Got a Gift Card?</h4>
                                                 <p>Enter your code here:</p>
                                                 <p>
@@ -236,7 +237,22 @@
                                                     </div>
                                                 </p>
                                                 <P>Lost your gift voucher? Call us at <span class="color-green">+88124/5678</span></P>
-                                            </div>
+                                      </div>  
+                                 {%else%} 
+                                     <div class="col-md-8">
+                                                <h4 class="color-green" style="margin-top: 200px;">Got a Gift Card?</h4>
+                                                <p>Please Login First To Read Gift:</p>
+                                                <p>
+                                                    <div class="input-group">
+                                                       <span class="input-group-btn">
+                                                                <a class="btn-u" href="/userlogin">Login</a>
+                                                            </span>
+                                                    </div>
+                                                </p>
+                                                <P>Lost your gift voucher? Call us at <span class="color-green">+88124/5678</span></P>
+                                      </div>  
+                                 {% endif %}  
+                                            
                                         </div>
                                     </div>
                                     <!-- <div class="modal-footer">

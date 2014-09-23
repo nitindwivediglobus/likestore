@@ -21,7 +21,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'likegiftdbnew',
+        'NAME': 'likegiftdbnew2',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
@@ -123,6 +123,10 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    )
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -142,6 +146,9 @@ INSTALLED_APPS = (
 # the site admins on every HTTP 500 error when DEBUG=False.
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
+
+INTERNAL_IPS = ('127.0.0.1',)
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

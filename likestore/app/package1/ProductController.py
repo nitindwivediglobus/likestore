@@ -16,23 +16,15 @@ from app.models import *
 
 
 def gifts(request):
-    """Renders the contact page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/browse.html',
-        
-        {
-            'title':'Contact',
-            'message':'Your contact page.',
-            'year':datetime.now().year,
-        }
-    )
+    products = Products.objects.raw('SELECT * FROM Products')
+    template=loader.get_template("app/browse.html")
+    rc=RequestContext(request,{'products':products})
+    return HttpResponse(template.render(rc))
 
 def gifts_1(request, cat):
     print ('hiiii')
     print (cat)
-    products = Products.objects.raw('SELECT * FROM Products')
+    products = Products.objects.raw('SELECT * FROM Products WHERE productcategoryid =', cat)
     template=loader.get_template("app/browse.html")
     rc=RequestContext(request,{'products':products})
     return HttpResponse(template.render(rc))
