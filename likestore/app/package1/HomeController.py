@@ -93,16 +93,19 @@ def userlogin(request):
 
 @csrf_protect
 def usersignup(request):
-    request.session['err_data']=''
+    request.session['err_data'] = ''
     if request.method == 'POST':
         form = request.POST
-        user = User.objects.create_user(
-            username = form['username'],
+        user = User.objects.create_user(username = form['username'],
             password = form['password1'],
-            email = form['email']
-        )
+            email = form['email'])
         new_user = authenticate(username = form['username'],
                                 password = form['password1'])
+
+        users = Users(userfirstname = form['username'],
+              useremail = form['email'],
+              userpassword = form['password1'])
+        users.save()
 
         if new_user is not None:
             if new_user.is_active:
@@ -116,8 +119,8 @@ def usersignup(request):
             request.session['err_data'] = "The credentials you provided are not correct!"
             return HttpResponseRedirect('/usersignup')
     else:
-     template=loader.get_template("app/page_registration.html")
-     rc=RequestContext(request,{'message':''})
+     template = loader.get_template("app/page_registration.html")
+     rc = RequestContext(request,{'message':''})
      return HttpResponse(template.render(rc))
 
 

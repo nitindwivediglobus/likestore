@@ -82,7 +82,7 @@
                     <li class="topbar-devider"></li>   
                     <li><a href="">RECEIVE GIFT</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href="">HOW IT WORKS</a></li>  
+                    <li><a href="/howitworks">HOW IT WORKS</a></li>  
                     <li class="topbar-devider"></li>   
                     <li><a href="">Browse</a></li>  
                     <li class="topbar-devider"></li>   
@@ -110,9 +110,9 @@
                     <li>
                         <section class="col col-md-5">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search ...">
+                                <input type="text" id="SearchWord" class="form-control" placeholder="Search ...">
                                 <span class="input-group-btn">
-                                    <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                                    <button  onclick="searchfunction()" class="btn-u" type="button"><i class="fa fa-search"></i></button>
                                 </span>
                             </div>
                         </section>
@@ -427,6 +427,17 @@
         App.initFancybox();   
     });
 </script>
+
+<script type="text/javascript">
+function searchfunction() 
+{
+var searchKey = document.getElementById("SearchWord").value;
+alert(searchKey)
+var url="/search/"+searchKey;
+window.location.href=url;
+}  
+</script>
+
 <script type="text/javascript">
     function sendgift(){
     alert("fdgf");

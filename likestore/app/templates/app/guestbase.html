@@ -34,7 +34,7 @@
   
 
     <!--[if lt IE 9]>
-        <link rel="stylesheet" href="css/sky-forms-ie8.css">
+        <link rel="stylesheet" href="/static/assets/css/sky-forms-ie8.css">
     <![endif]-->
 
     <!-- CSS Page Style -->    
@@ -77,13 +77,13 @@
                     <li><a href=""><i class="fa fa-envelope-o fa-fw"></i>support@likegift.ru</a></li>  
                 </ul>
                 <ul class="loginbar pull-right">
-                    <li><a href="">SEND GIFT</a></li>  
+                    <li><a href="/sendgift">SEND GIFT</a></li>  
                     <li class="topbar-devider"></li>   
                     <li><a href="">RECEIVE GIFT</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href="">HOW IT WORKS</a></li>  
+                    <li><a href="/howitworks">HOW IT WORKS</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href="">Browse</a></li>  
+                    <li><a href="/gifts">Browse</a></li>  
                     <li class="topbar-devider"></li>   
                    {% if request.session.user %}  
                     <li><i class="fa fa-sign-in fa-fw"></i><a href="/userlogout">LogOut</a></li>  
@@ -109,9 +109,9 @@
                     <li>
                         <section class="col col-md-5">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search ...">
+                                <input type="text" id="SearchWord" class="form-control" placeholder="Search ...">
                                 <span class="input-group-btn">
-                                    <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                                    <button  onclick="searchfunction()" class="btn-u" type="button"><i class="fa fa-search"></i></button>
                                 </span>
                             </div>
                         </section>
@@ -148,82 +148,82 @@
                     <ul class="nav navbar-nav">
                         <!-- Home -->
                         <li class="active">
-                            <a href=/gifts/1>
+                            <a href=/catgift/1>
                                 SPA
                             </a>
                         </li>
                         <!-- End Home -->
                         <!-- Pages -->                        
                         <li>
-                            <a href=/gifts/2>
+                            <a href=/catgift/2>
                                 DINING
                             </a>
                         </li>
                         <!-- End Pages -->
                         <!-- Features -->
                         <li>
-                            <a href=/gifts/3>
+                            <a href=/catgift/3>
                                 APPAREL
                             </a>
                         </li>
                         <!-- End Features -->
                         <!-- Portfolio -->
                         <li>
-                            <a href=/gifts/4>
+                            <a href=/catgift/4>
                                 GETAWAYS
                             </a>
                         </li>
                         <!-- Ens Portfolio -->
                         <!-- Blog -->
                         <li>
-                            <a href=/gifts/4>
+                            <a href=/catgift/5>
                                 ACTIVITIES
                             </a>
                         </li>
                         <!-- End Blog -->
                         <!-- Contacts -->
                         <li>
-                            <a href=/gifts/5>
+                            <a href=/catgift/6>
                                 ADVENTURE
                             </a>
                         </li>   
                         <li>
-                            <a href=/gifts/6>
+                            <a href=/catgift/7>
                                 LIFESTYLE
                             </a>
                         </li>
                         <!-- End Home -->
                         <!-- Pages -->                        
                         <li>
-                            <a href=/gifts/7>
+                            <a href=/catgift/8>
                                 HOME
                             </a>
                         </li>
                         <!-- End Pages -->
                         <!-- Features -->
                         <li>
-                            <a href=/gifts/8>
+                            <a href=/catgift/9>
                                 FASHION
                             </a>
                         </li>
                         <!-- End Features -->
                         <!-- Portfolio -->
                         <li>
-                            <a href=/gifts/9>
+                            <a href=/catgift/10>
                                 SPECIAL TREAT
                             </a>
                         </li>
                         <!-- Ens Portfolio -->
                         <!-- Blog -->
                         <li>
-                            <a href=/gifts/9>
+                            <a href=/catgift/11>
                                 KIDS
                             </a>
                         </li>
                         <!-- End Blog -->
                         <!-- Contacts -->
                         <li>
-                            <a href=/gifts/10>
+                            <a href=/catgift/12>
                                 SHOWS
                             </a>
                         </li>                  
@@ -471,6 +471,67 @@
         ReviewForm.initReviewForm();        
         CheckoutForm.initCheckoutForm(); 
     });
+
+  $('.ca1').click(function() {
+        $(this).checked;
+        var chkArray = [];
+	
+	    /* look for all checkboes that have a class 'chk' attached to it and check if it was checked */
+	    $(".ca1 input:checked").each(function() {
+        
+		chkArray.push($(this).attr('id'));
+        
+	    });
+	
+	    /* we join the array separated by the comma */
+	    var selected;
+	    selected = "("+chkArray.join(',')+")";
+	
+	    /* check if there is selected checkboxes, by default the length is 1 as it contains one single comma */
+	    if(selected.length > 1){
+		//alert("You have selected " + selected);	
+         $.ajax({
+                type: "POST",
+                url: "/filter", // the file to call
+                dataType: "json",
+                async: true,
+                data: {
+                        csrfmiddlewaretoken: '{{ csrf_token }}',
+                        filterdata: selected,},
+                success: function(json) { // on success..
+                //alert("ffff");
+                console.log(json.products);
+                var finaldata="";
+                var dict = $.parseJSON(json.products);
+                dict.forEach(function(obj) { console.log(obj);
+                 
+                finaldata = finaldata + "<div class='col-md-3'> <div class='thumbnails thumbnail-style thumbnail-kenburn'><div class='thumbnail-img'><div class='overflow-hidden'><img class='img-responsive' src='/static/"+obj.fields.productimage+"' alt=''></div><a class='btn-more hover-effect' href='/sendgift'>SEND AS GIFT+</a></div><div class='caption'><h3><a class='hover-effect' href='#'>"+obj.fields.productname+"</a></h3><p>"+obj.fields.productprice+"</p></div></div></div>"
+               
+                    
+                 });
+
+                var generateHere = document.getElementById("gifts");
+                generateHere.innerHTML=finaldata;
+           
+                }
+            });
+	    }else{
+		alert("Please at least one of the checkbox");	
+	}
+    
+});
+</script>
+
+<script type="text/javascript">
+function searchfunction() 
+{
+var searchKey = document.getElementById("SearchWord").value;
+ if(!searchKey){
+        searchKey  = document.getElementById("SearchWordSecond").value;
+    }
+var url="/search/"+searchKey;
+window.location.href=url;
+}  
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
