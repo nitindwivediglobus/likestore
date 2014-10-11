@@ -21,7 +21,7 @@ def home(request):
         request,
         'app/index.html',
        {
-            'title':'Home Page',
+            'title':'Welcome',
             'year':datetime.now().year,
         }
     )

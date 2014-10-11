@@ -35,11 +35,10 @@
     <Compile Include="app\package1\CartController.py" />
     <Compile Include="app\package1\CategoryController.py" />
     <Compile Include="app\package1\HomeController.py" />
+    <Compile Include="app\package1\importer.py" />
     <Compile Include="app\package1\ProductController.py" />
     <Compile Include="app\package1\UserController.py" />
-    <Compile Include="app\package1\__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="app\package1\__init__.py" />
     <Compile Include="app\static\assets\plugins\vector-map\converter\converter.py" />
     <Compile Include="app\static\assets\plugins\vector-map\converter\simplifier.py" />
     <Compile Include="app\tests.py" />
@@ -327,6 +326,11 @@
     <Folder Include="likestore\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\package1\Admin.pyc" />
+    <Content Include="app\package1\HomeController.pyc" />
+    <Content Include="app\package1\importer.pyc" />
+    <Content Include="app\package1\ProductController.pyc" />
+    <Content Include="app\package1\__init__.pyc" />
     <Content Include="app\static\assets2\css\style.css" />
     <Content Include="app\static\assets2\css\style.min.css" />
     <Content Include="app\static\assets2\fonts\glyphicons-halflings-regular.eot" />
@@ -996,6 +1000,7 @@
     <Content Include="app\static\assets\img\mockup\1.png" />
     <Content Include="app\static\assets\img\mockup\iphone.png" />
     <Content Include="app\static\assets\img\mockup\iphone1.png" />
+    <Content Include="app\static\assets\img\navbar.png" />
     <Content Include="app\static\assets\img\new\img1.jpg" />
     <Content Include="app\static\assets\img\new\img10.jpg" />
     <Content Include="app\static\assets\img\new\img11.jpg" />
@@ -1993,20 +1998,34 @@
     <Content Include="app\static\assets\plugins\vector-map\tests\index.html" />
     <Content Include="app\static\assets\plugins\vector-map\tests\markers.html" />
     <Content Include="app\static\assets\plugins\vector-map\tests\reverse-projection.html" />
+    <Content Include="app\templates\admin\image_uploader.html" />
     <Content Include="app\templates\admin\index.html" />
+    <Content Include="app\templates\admin\orderlist.html" />
     <Content Include="app\templates\admin\page_login.html" />
     <Content Include="app\templates\admin\page_register.html" />
     <Content Include="app\templates\admin\tables_beauty.html" />
     <Content Include="app\templates\admin\tables_datatables.html" />
     <Content Include="app\templates\admin\tables_simple.html" />
+    <Content Include="app\templates\admin\test.html" />
+    <Content Include="app\templates\admin\upload_product.html" />
     <Content Include="app\templates\admin\userlist.html" />
+    <Content Include="app\templates\app\about_us.html" />
+    <Content Include="app\templates\app\blog.html" />
     <Content Include="app\templates\app\browse.html" />
+    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\exp.html" />
+    <Content Include="app\templates\app\faq.html" />
     <Content Include="app\templates\app\guestbase.html" />
     <Content Include="app\templates\app\indexbase.html" />
     <Content Include="app\templates\app\page_login.html" />
     <Content Include="app\templates\app\page_registration.html" />
+    <Content Include="app\templates\app\privacy.html" />
+    <Content Include="app\templates\app\product.html" />
     <Content Include="app\templates\app\send_gift.html" />
     <Content Include="app\templates\app\how_it_works.html" />
+    <Content Include="app\templates\app\ordersuccess.html" />
+    <Content Include="app\templates\app\payment.html" />
+    <Content Include="app\templates\app\terms.html" />
     <Content Include="requirements.txt" />
     <Content Include="app\static\app\content\bootstrap.css" />
     <Content Include="app\static\app\content\bootstrap.min.css" />

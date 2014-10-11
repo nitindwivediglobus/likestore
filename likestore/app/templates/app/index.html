@@ -2,16 +2,17 @@
 
 {% block content %}
 {% load staticfiles %}
+
    <!--=== Search Block ===-->
     <div class="search-block parallaxBg">
         <div class="container">
             <div class="col-md-7 col-md-offset-3">
                 <h1>Welcome to the <span class="color-green">Home of Gifts</span></h1>
                 <h4><span class="color-light">find and send gifts to your friends and family</span></h4>
-                <div class="row">
+                <div class="row" style="opacity: 0.7;">
                             <section class="col col-md-5">
-                                <select class="form-control">
-                                    <option value="none" selected disabled>By Occassions</option>
+                                <select id="Occassion" class="form-control">
+                                    <option>By Occassions</option>
                                     <option>Birth DAy</option>
                                     <option>Anniversary</option>
                                     <option>Marriage</option>
@@ -20,8 +21,8 @@
                                 </select>
                             </section>
                             <section class="col col-md-5">
-                                <select class="form-control">
-                                    <option value="0" selected="" disabled="">Select Relationship ...</option>
+                                <select id="Relationship" class="form-control">
+                                    <option>Select Relationship ...</option>
                                     <option>Brother</option>
                                     <option>Sister</option>
                                     <option>Family</option>
@@ -31,7 +32,7 @@
                             </section>
                             <div class="input-group">
                             <span class="input-group-btn">
-                                <button class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                                <button onclick="searchFromSelection()" class="btn-u" type="button"><i class="fa fa-search"></i></button>
                             </span>
                         </div>
                         </div>
@@ -129,7 +130,7 @@
                         <br>Only takes a minute to register. Lorem ipsum dolor sit amet.</p>
                 </div>            
                 <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="#" class="btn-u btn-u-lg btn-u-light-green"><i class="fa fa-sign-in"></i> Register Now</a>
+                    <a href="/usersignup" class="btn-u btn-u-lg btn-u-light-green"><i class="fa fa-sign-in"></i> Register Now</a>
                 </div>
             </div>
         </div>
@@ -252,16 +253,16 @@
                
                 <div class="row brand-page margin-bottom-40">
                     <div class="ladda-btn">
-                        <a rel="shrink" class="btn-u btn-u-dark-green shrink">Lego Marvel PS3<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                         <a rel="shrink" class="btn-u btn-u-dark-green shrink">Clothing<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                          <a rel="shrink" class="btn-u btn-u-dark-green shrink">Lego Marvel PS3<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                           <a rel="shrink" class="btn-u btn-u-dark-green shrink">Lorem Ipsum<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                            <a rel="shrink" class="btn-u btn-u-dark-green shrink">Lego Marvel PS3<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                          <a rel="shrink" class="btn-u btn-u-green shrink">Clothing</a>
-                          <a rel="shrink" class="btn-u btn-u-green shrink">Fish Mask  6K6</a>
-                          <a rel="shrink" class="btn-u btn-u-green shrink">Lorem Ipsum<i class="fa fa-search fa-fw">12</i></a>
-                          <a rel="shrink" class="btn-u btn-u-green shrink">Lego Marvel PS3<button class="btn-u btn-u-dark-green" type="button"><i class="fa fa-search">12</i></button></a>
-                          <a rel="shrink" class="btn-u btn-u-green shrink">Airsprung Evanton Memory Single Matress</a>
+                        <a rel="shrink" href="/catgift/1" class="btn-u btn-u-dark-green shrink">Lego Marvel PS3<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
+                         <a rel="shrink" href="/catgift/2" class="btn-u btn-u-dark-green shrink">Clothing<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
+                          <a rel="shrink" href="/catgift/3" class="btn-u btn-u-dark-green shrink">Lego Marvel PS3<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
+                           <a rel="shrink" href="/catgift/4" class="btn-u btn-u-dark-green shrink">Lorem Ipsum<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
+                            <a rel="shrink" href="/catgift/5" class="btn-u btn-u-dark-green shrink">Lego Marvel PS3<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
+                          <a rel="shrink" href="/catgift/6" class="btn-u btn-u-green shrink">Clothing</a>
+                          <a rel="shrink" href="/catgift/7" class="btn-u btn-u-green shrink">Fish Mask  6K6</a>
+                          <a rel="shrink" href="/catgift/8" class="btn-u btn-u-green shrink">Lorem Ipsum<i class="fa fa-search fa-fw">12</i></a>
+                          <a rel="shrink" href="/catgift/9" class="btn-u btn-u-green shrink">Lego Marvel PS3<button class="btn-u btn-u-dark-green" type="button"><i class="fa fa-search">12</i></button></a>
+                          <a rel="shrink" href="/catgift/10" class="btn-u btn-u-green shrink">Airsprung Evanton Memory Single Matress</a>
                     </div>
                 </div>                
                 <!--Inversed and Rounded Buttons-->
@@ -316,7 +317,19 @@
                 <!-- End Owl Carousel v2 --> 
     </div>    
     <!--=== End Parallax Counter ===-->
-
+<script type="text/javascript">
+function searchFromSelection() 
+{
+var searchKey = document.getElementById("Occassion").value;
+ if(searchKey=='By Occassions'){
+        searchKey  = document.getElementById("Relationship").value;
+        if(searchKey=='Select Relationship ...'){return false;}
+    }
+alert(searchKey)
+var url="/search/"+searchKey;
+window.location.href=url;
+}  
+</script>
 
    
     <!--=== Container Part ===-->

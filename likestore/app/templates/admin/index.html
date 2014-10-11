@@ -40,32 +40,98 @@
 			</div>
 		</div>
 		<div class="devoops-modal-inner">
-        
-            <label>Username</label>
-                <div>
-                <input id="newevent_name" class="form-control" type="text" placeholder="Name of event">
+        <form action="/updateuser" method="post">{% csrf_token %}
+            <label>UserID</label>
+                <div >
+                <input id="newid" name="newid" class="form-control" type="text">
                 </div>
 
-             <label>EmilId</label>
+            <label>Userfname</label>
                 <div>
-                <input id="newevent_name" class="form-control" type="text" placeholder="Name of event">
+                <input id="newfname" name="newfname" class="form-control" type="text">
+                </div>
+
+             <label>Userlname</label>
+                <div>
+                <input id="newlname" name="newlname" class="form-control" type="text">
                 </div>
 
             <label>Phone</label>
                 <div>
-                <input id="newevent_name" class="form-control" type="text" placeholder="Name of event">
+                <input id="newphone" name="newphone" class="form-control" type="text">
                 </div>
 
             <label>City</label>
                 <div>
-                <input id="newevent_name" class="form-control" type="text" placeholder="Name of event">
+                <input id="newcity" name="newcity" class="form-control" type="text">
                 </div>
 
             <label>Country</label>
                 <div>
-                <input id="newevent_name" class="form-control" type="text" placeholder="Name of event">
+                <input id="newcountry" name="newcountry" class="form-control" type="text">
                 </div>
 
+              <label>useremail</label>
+                <div >
+                <input id="newemail" name="newemail" class="form-control" type="text">
+                </div>
+
+            <label>password</label>
+                <div>
+                <input id="newpass" name="newpass" class="form-control" type="text">
+                </div>
+
+             <label>state</label>
+                <div>
+                <input id="newstate" name="newstate" class="form-control" type="text">
+                </div>
+
+            <label>zip</label>
+                <div>
+                <input id="newzip" name="newzip" class="form-control" type="text">
+                </div>
+
+            <label>emailverify</label>
+                <div>
+                <input id="newemailver" name="newemailver" class="form-control" type="text">
+                </div>
+
+            <label>date</label>
+                <div>
+                <input id="newdate" name="newdate" class="form-control" type="text">
+                </div>
+
+              <label>Usercode</label>
+                <div >
+                <input id="newcode" name="newcode" class="form-control" type="text">
+                </div>
+
+            <label>ip</label>
+                <div>
+                <input id="newip" name="newip" class="form-control" type="text">
+                </div>
+
+             <label>fax</label>
+                <div>
+                <input id="newfax" name="newfax" class="form-control" type="text">
+                </div>
+
+            <label>add</label>
+                <div>
+                <input id="newadd" name="newadd" class="form-control" type="text">
+                </div>
+
+            <label>add2</label>
+                <div>
+                <input id="newadd2" name="newadd2" class="form-control" type="text">
+                </div>
+
+            <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+                <button type="submit" class="btn-u btn-block">Save</button>                
+            </div>
+        </div>
+        </form>
 		</div>
 		<div class="devoops-modal-bottom">
 		</div>
@@ -151,7 +217,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="/logoutadmin">
 											<i class="fa fa-power-off"></i>
 											<span>Logout</span>
 										</a>
@@ -180,14 +246,11 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
 						<i class="fa fa-bar-chart-o"></i>
-						<span class="hidden-xs">Charts</span>
+						<span class="hidden-xs">Orders</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/charts_xcharts.html">xCharts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_flot.html">Flot Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_google.html">Google Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_morris.html">Morris Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_coindesk.html">CoinDesk realtime</a></li>
+						<li><a class="ajax-link" href="ajax/charts_xcharts.html">Today</a></li>
+						<li><a class="" href="/allorders">All</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -196,6 +259,7 @@
 						 <span class="hidden-xs">Products</span>
 					</a>
 					<ul class="dropdown-menu">
+                        <li><a class="" href="/allproducts">ALL</a></li>
 						<li><a class="" href="/myproducts/1">SPA</a></li>
 						<li><a class="" href="/myproducts/2">DINING</a></li>
 						<li><a class="" href="/myproducts/3">APPAREL</a></li>
@@ -218,7 +282,8 @@
 					<ul class="dropdown-menu">
 						<li><a class="ajax-link" href="ajax/forms_elements.html">Elements</a></li>
 						<li><a class="ajax-link" href="ajax/forms_layouts.html">Layouts</a></li>
-						<li><a class="ajax-link" href="ajax/forms_file_uploader.html">File Uploader</a></li>
+						<li><a class="" href="/uploadimage">File Uploader</a></li>
+                        <li><a class="" href="/uproducts">Update Products</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -349,6 +414,7 @@
 		<!--End Content-->
 	</div>
 </div>
+
 <!--End Container-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!--<script src="http://code.jquery.com/jquery.js"></script>-->
@@ -361,5 +427,6 @@
 <script src="/static/assets2/plugins/tinymce/jquery.tinymce.min.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="/static/assets2/js/devoops.js"></script>
+
 </body>
 </html>

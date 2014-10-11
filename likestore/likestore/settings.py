@@ -1,7 +1,7 @@
 """
 Django settings for likestore project.
 """
-
+import os, django
 from os import path
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
 
@@ -31,6 +31,18 @@ DATABASES = {
 
 LOGIN_URL = '/login'
 
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = 'nitinanytime@gmail.com'
+
+EMAIL_HOST_PASSWORD = '9424682715'
+
+EMAIL_PORT = 587
+
+EMAIL_USE_TLS = True
+
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -59,7 +71,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = path.join(PROJECT_ROOT, 'app/static/assets/img/main').replace('\\', '/')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -115,6 +127,8 @@ ROOT_URLCONF = 'likestore.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'likestore.wsgi.application'
+
+SENDSMS_BACKEND = 'sendsms.backends.console.SmsBackend'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or

@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->  
 <head>
-    <title>Like Gifts | Welcome...</title>
+    <title>Like Gift |{{title}}</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -12,7 +12,7 @@
     <meta name="author" content="Chanchal Santra">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+    
  {% load staticfiles %}
     <!-- CSS Page Style -->    
     <link rel="stylesheet" href="{% static 'assets/css/pages/page_log_reg_v2.css' %}">    
@@ -70,16 +70,16 @@
             <div class="container">
                 <!-- Topbar Navigation -->
                 <ul class="loginbar pull-left">
-                    <li><a href="">24x7 CUSTOMER SUPPORT</a></li>  
+                    <li><a href="mailto:support@likegift.ru">24x7 CUSTOMER SUPPORT</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href=""><i class="fa fa-phone fa-fw"></i>+88124/5678</a></li>  
+                    <li><a href="tel:+88124/5678"><i class="fa fa-phone fa-fw"></i>+88124/5678</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href=""><i class="fa fa-envelope-o fa-fw"></i>support@likegift.ru</a></li>  
+                    <li><a href="mailto:support@likegift.ru"><i class="fa fa-envelope-o fa-fw"></i>support@likegift.ru</a></li>  
                 </ul>
                 <ul class="loginbar pull-right">
                     <li><a href="/sendgift">SEND GIFT</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href="">RECEIVE GIFT</a></li>  
+                    <li><a href="" data-toggle="modal" data-target="#receivegift">RECEIVE GIFT</a></li>  
                     <li class="topbar-devider"></li>   
                     <li><a href="/howitworks">HOW IT WORKS</a></li>  
                     <li class="topbar-devider"></li>   
@@ -98,12 +98,19 @@
                 <ul class="loginbar">
                     <li class="col-md-offset-3 pull-left">
                         <select class="form-control">
-                            <option value="none" selected disabled>Product</option>
-                            <option>Product 1</option>
-                            <option>Product x</option>
-                            <option>Product x</option>
-                            <option>Product x</option>
-                            <option>Product x</option>
+                            <option>All Product</option>
+                            <option>SPA</option>
+                            <option>DINING</option>
+                            <option>APPAREL</option>
+                            <option>GETAWAYS</option>
+                            <option>ACTIVITIES</option>
+                            <option>ADVENTURE</option>
+                            <option>LIFESTYLE</option>
+                            <option>HOME</option>
+                            <option>FASHION</option>
+                            <option>SPECIAL TREAT</option>
+                            <option>KIDS</option>
+                            <option>SHOWS</option>
                         </select>
                     </li>
                     <li>
@@ -119,7 +126,7 @@
                     <li class="pull-right">
                         <button class="btn-u btn-brd rounded-4x btn-u-green btn-u-sm" type="button" data-toggle="modal" data-target="#receivegift">
                             <span class="badge badge-green rounded-x">3</span>
-                            <i class="fa fa-shopping-cart"></i> RUB 8800
+                            <i class="fa fa-shopping-cart"></i> MY Gifts
                         </button>
                        
                     </li>
@@ -138,7 +145,7 @@
                         <span class="sr-only">Toggle navigation</span>
                         <span class="fa fa-bars"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         <i id="logo-header" class="fa fa-home fa-3x active color-light" alt="Logo"></i>
                     </a>
                 </div>
@@ -243,7 +250,7 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="headline"><h4>How to Redeem?</h4></div>
-                                           <p>Lorem ipsum dolor. Visit our website and enter your gift code. Choose a merchant / partner brand to redeem your gift voucher at. Generate a gift code for your selected partner brand and follow the steps shown on the screen to redeem. <br>
+                                           <p  id="Pdescription">Lorem ipsum dolor. Visit our website and enter your gift code. Choose a merchant / partner brand to redeem your gift voucher at. Generate a gift code for your selected partner brand and follow the steps shown on the screen to redeem. <br>
                                                 Reservation required for restaurants, spa and all activities. Call us to make a reservation. Bring the gift voucher to the partner brand to redeem.</p>
                                                 <h6 class="color-green"><i class="fa fa-exclamation-circle fa-1x"></i>need help?</h6>
                                             </div>
@@ -255,7 +262,7 @@
                                                     <div class="input-group">
                                                         <input type="text" class="form-control" placeholder="Enter your code here">
                                                             <span class="input-group-btn">
-                                                                <button class="btn-u" type="button">SUBMIT</button>
+                                                                <button class="btn-u" type="button" onclick="javascript:receivegift()">SUBMIT</button>
                                                             </span>
                                                     </div>
                                                 </p>
@@ -319,26 +326,26 @@
                   <!--   <div class="headline"><h2></h2></div>   -->
                     <table class="table">
                         <tbody>
+                            <!--<tr>
+                                <td href="#">Merchant registration</td>
+                            </tr>-->
                             <tr>
-                                <td>Merchant registration</td>
+                                <td><a href="/faq">FAQ</a></td>
                             </tr>
                             <tr>
-                                <td>FAQ</td>
+                                <td><a href="/aboutus">Careers</a></td>
                             </tr>
                             <tr>
-                                <td>Careers</td>
+                                <td><a href="/terms">Terms &amp; Conditions</a></td>
                             </tr>
                             <tr>
-                                <td>Terms &amp; Conditions</td>
+                                <td><a href="/privacy">Privacy Policy</a></td>
                             </tr>
                             <tr>
-                                <td>Privacy Policy</td>
+                                <td><a href="/contact">Contact Us</a></td>
                             </tr>
                             <tr>
-                                <td>Contact Us</td>
-                            </tr>
-                            <tr>
-                                <td>Blog</td>
+                                <td ><a href="/blog">Blog</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -351,7 +358,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Your Email Address">                            
                             <span class="input-group-btn">
-                                <button class="btn-u" type="button">Subscribe</button>
+                                <button class="btn-u" href="/contact" type="button">Subscribe</button>
                             </span>
                         </div>                  
                     </form> 
@@ -417,7 +424,7 @@
                 </div>
                 <div class="col-md-6">  
                     <a href="index.html">
-                        <img id="logo-footer" src="assets/img/logo1-default.png" class="pull-right" alt="" />
+                        <img id="logo-footer" src="/static/assets/img/logo1-default.png" class="pull-right" alt="" />
                     </a>
                 </div>
             </div>
@@ -472,9 +479,27 @@
         CheckoutForm.initCheckoutForm(); 
     });
 
-  $('.ca1').click(function() {
+$('.lo1').click(function() {
         $(this).checked;
+        fun1();
+    
+});
+
+$('#slider2-rounded').click(function() {
+        fun1();
+});
+
+
+$('.ca1').click(function() {
+        $(this).checked;
+        fun1();
+        
+});
+function fun1(){
+       
         var chkArray = [];
+
+     
 	
 	    /* look for all checkboes that have a class 'chk' attached to it and check if it was checked */
 	    $(".ca1 input:checked").each(function() {
@@ -486,6 +511,32 @@
 	    /* we join the array separated by the comma */
 	    var selected;
 	    selected = "("+chkArray.join(',')+")";
+        //alert(selected);
+        
+
+        var chkArraysec = [];
+	
+	    /* look for all checkboes that have a class 'chk' attached to it and check if it was checked */
+	    $(".lo1 input:checked").each(function() {
+        
+		chkArraysec.push($(this).attr('id'));
+        
+	    });
+	
+	    /* we join the array separated by the comma */
+	    var locselected;
+	    locselected = "(\""+chkArraysec.join('\",\"')+"\")";
+        //alert(locselected);
+        
+        var prc1 = document.getElementById("slider2-value1-rounded").innerHTML;
+        
+        var prc2 = document.getElementById("slider2-value2-rounded").innerHTML;
+        var pricerange=prc1+" and "+prc2;
+        //alert(pricerange);
+        var sortby = document.getElementById("sortby").value;
+        //alert(sortby);
+
+
 	
 	    /* check if there is selected checkboxes, by default the length is 1 as it contains one single comma */
 	    if(selected.length > 1){
@@ -497,7 +548,10 @@
                 async: true,
                 data: {
                         csrfmiddlewaretoken: '{{ csrf_token }}',
-                        filterdata: selected,},
+                        filterdata: selected,
+                        locationdata: locselected,
+                        pricedata: pricerange,
+                        sortdata: sortby,},
                 success: function(json) { // on success..
                 //alert("ffff");
                 console.log(json.products);
@@ -505,7 +559,7 @@
                 var dict = $.parseJSON(json.products);
                 dict.forEach(function(obj) { console.log(obj);
                  
-                finaldata = finaldata + "<div class='col-md-3'> <div class='thumbnails thumbnail-style thumbnail-kenburn'><div class='thumbnail-img'><div class='overflow-hidden'><img class='img-responsive' src='/static/"+obj.fields.productimage+"' alt=''></div><a class='btn-more hover-effect' href='/sendgift'>SEND AS GIFT+</a></div><div class='caption'><h3><a class='hover-effect' href='#'>"+obj.fields.productname+"</a></h3><p>"+obj.fields.productprice+"</p></div></div></div>"
+                finaldata = finaldata + "<div class='col-md-3'> <div class='thumbnails thumbnail-style thumbnail-kenburn'><div class='thumbnail-img'><div class='overflow-hidden'><img class='img-responsive' src='/static/"+obj.fields.productimage+"' alt=''></div><a class='btn-more hover-effect' href='/selgift/"+obj.pk+"'>SEND AS GIFT+</a></div><div class='caption'><h3><a class='hover-effect' href='#'>"+obj.fields.productname+"</a></h3><p>"+obj.fields.productprice+"</p></div></div></div>"
                
                     
                  });
@@ -519,19 +573,51 @@
 		alert("Please at least one of the checkbox");	
 	}
     
-});
-</script>
+}
 
+</script>
+<script src="https://raw.githubusercontent.com/kvz/phpjs/master/functions/strings/md5.js"></script>
 <script type="text/javascript">
+
+
 function searchfunction() 
 {
-var searchKey = document.getElementById("SearchWord").value;
+ var searchKey = document.getElementById("SearchWord").value;
  if(!searchKey){
         searchKey  = document.getElementById("SearchWordSecond").value;
     }
 var url="/search/"+searchKey;
 window.location.href=url;
 }  
+
+function receivegift(){
+    var trackcode = document.getElementById('trackcode').value;
+    alert(trackcode);
+    $.ajax({
+        type: 'GET',
+        url: '/receivegift',
+        dataType: "json",
+        async: true,
+        data: { trackcode: trackcode
+        },
+        success: function(response){
+                console.log(response);
+                var obj = response;
+                 console.log(obj.result);
+                if(obj.result == "success") {
+                    var sendername = obj.sendername;
+                    var cost = obj.ordercost;
+                    var desc = $.parseJSON(obj.orderdesc);
+                    document.getElementById('Pdescription').innerHTML = 'Sender: '+sendername + '</br>Cost: '+cost + 
+                            '</br>Gift ID: '+ desc.Productid + '</br>Size: '+ desc.Size + '</br>Color: '+ desc.Color +
+                            '</br>Qantity: '+ desc.Qty;
+                } else {
+                    var unauth = obj.result;
+                    document.getElementById('Pdescription').innerHTML = unauth;
+                }
+        }
+    });
+}
 </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>

@@ -51,7 +51,7 @@ class Orders(models.Model):
     orderzip = models.CharField(db_column='OrderZip', max_length=20)  # Field name made lowercase.
     ordercountry = models.CharField(db_column='OrderCountry', max_length=50)  #Field name made lowercase.
     orderphone = models.CharField(db_column='OrderPhone', max_length=20)  # Field name made lowercase.
-    orderfax = models.CharField(db_column='OrderFax', max_length=20)  # Field name made lowercase.
+    orderdesc = models.CharField(db_column='OrderDesc', max_length=100)  # Field name made lowercase.
     ordershipping = models.FloatField(db_column='OrderShipping')  # Field name made lowercase.
     ordertax = models.FloatField(db_column='OrderTax')  # Field name made lowercase.
     orderemail = models.CharField(db_column='OrderEmail', max_length=100)  # Field name made lowercase.
@@ -103,11 +103,16 @@ class Products(models.Model):
     productcartdesc = models.CharField(db_column='ProductCartDesc', max_length=250)  # Field name made lowercase.
     productshortdesc = models.CharField(db_column='ProductShortDesc', max_length=1000)  # Field name made lowercase.
     productlongdesc = models.TextField(db_column='ProductLongDesc')  # Field name made lowercase.
+    productsize = models.CharField(db_column='ProductSize', max_length=100)  # Field name made lowercase.
+    productcolor = models.CharField(db_column='ProductColor', max_length=100)  # Field name made lowercase.
+    productrating = models.IntegerField(db_column='ProductRating', blank=True, null=True)  # Field name made lowercase.
     productthumb = models.CharField(db_column='ProductThumb', max_length=100)  # Field name made lowercase.
     productimage = models.CharField(db_column='ProductImage', max_length=100)  # Field name made lowercase.
+    productimage2 = models.CharField(db_column='ProductImage2', max_length=100)  # Field name made lowercase.
+    productimage3 = models.CharField(db_column='ProductImage3', max_length=100)  # Field name made lowercase.
     productcategoryid = models.IntegerField(db_column='ProductCategoryID', blank=True, null=True)  # Field name made lowercase.
     productupdatedate = models.DateTimeField(db_column='ProductUpdateDate')  # Field name made lowercase.
-    productstock = models.FloatField(db_column='ProductStock', blank=True, null=True)  # Field name made lowercase.
+    productstock = models.IntegerField(db_column='ProductStock', blank=True, null=True)  # Field name made lowercase.
     productlive = models.IntegerField(db_column='ProductLive', blank=True, null=True)  # Field name made lowercase.
     productunlimited = models.IntegerField(db_column='ProductUnlimited', blank=True, null=True)  # Field name made lowercase.
     productlocation = models.CharField(db_column='ProductLocation', max_length=250, blank=True)  # Field name made lowercase.

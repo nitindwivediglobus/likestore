@@ -30,6 +30,7 @@ def home(request):
         }
     )
 
+
 def contact(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
@@ -44,12 +45,37 @@ def contact(request):
         }
     )
 
-def about(request):
+def aboutus(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/about.html',
+        'app/about_us.html',
+        
+        {
+            'title':'About',
+        }
+    )
+
+def blog(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/blog.html',
+        
+        {
+            'title':'About',
+        }
+    )
+
+
+def faq(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/faq.html',
         
         {
             'title':'About',
@@ -57,6 +83,37 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+
+def privacy(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/privacy.html',
+        
+        {
+            'title':'About',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
+
+def terms(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/terms.html',
+        
+        {
+            'title':'About',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        }
+    )
+
 
 def userlogin(request):
     """Renders the login page."""
@@ -71,7 +128,12 @@ def userlogin(request):
                 if new_user.is_active:
                     login(request, new_user)
                     request.session['user'] = new_user.id
-                    return HttpResponseRedirect('/sendgift')
+                    if 'preurl' in request.session:
+                       preurl=request.session['preurl']
+                       del request.session['preurl']
+                       return HttpResponseRedirect(preurl)
+                    else:
+                       return HttpResponseRedirect('/gifts')
                 else:
                     template=loader.get_template("app/page_login.html")
                     rc=RequestContext(request,{'message':'Your account has been disabled!'})

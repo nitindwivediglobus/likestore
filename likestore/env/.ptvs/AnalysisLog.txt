@@ -16650,3 +16650,309 @@ C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Micro
 2014-09-29T16:48:06: Saving group "E:\workspace\likestore\likestore\env\Lib\site-packages\xlrd"
 2014-09-29T16:48:06: End of group "E:\workspace\likestore\likestore\env\Lib\site-packages\xlrd"
 2014-09-29T16:48:06: Deleting 0 files
+
+2014-10-06T12:48:53: Start analysis
+2014-10-06T12:48:53: IncludeModulesFromModulePath = win32com
+2014-10-06T12:48:53: Deleting 2 files
+2014-10-06T12:48:53: Scraping PIL._imaging
+2014-10-06T12:48:53: Command: E:\workspace\likestore\likestore\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py" scrape PIL._imaging E:\workspace\likestore\likestore\env\Lib\site-packages E:\workspace\likestore\likestore\env\.ptvs\site-packages_PIL\PIL._imaging
+2014-10-06T12:48:54: Scraping PIL._imagingcms
+2014-10-06T12:48:54: Command: E:\workspace\likestore\likestore\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py" scrape PIL._imagingcms E:\workspace\likestore\likestore\env\Lib\site-packages E:\workspace\likestore\likestore\env\.ptvs\site-packages_PIL\PIL._imagingcms
+2014-10-06T12:48:54: Scraping PIL._imagingft
+2014-10-06T12:48:54: Command: E:\workspace\likestore\likestore\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py" scrape PIL._imagingft E:\workspace\likestore\likestore\env\Lib\site-packages E:\workspace\likestore\likestore\env\.ptvs\site-packages_PIL\PIL._imagingft
+2014-10-06T12:48:54: Scraping PIL._imagingmath
+2014-10-06T12:48:54: Command: E:\workspace\likestore\likestore\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py" scrape PIL._imagingmath E:\workspace\likestore\likestore\env\Lib\site-packages E:\workspace\likestore\likestore\env\.ptvs\site-packages_PIL\PIL._imagingmath
+2014-10-06T12:48:54: Scraping PIL._imagingmorph
+2014-10-06T12:48:54: Command: E:\workspace\likestore\likestore\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py" scrape PIL._imagingmorph E:\workspace\likestore\likestore\env\Lib\site-packages E:\workspace\likestore\likestore\env\.ptvs\site-packages_PIL\PIL._imagingmorph
+2014-10-06T12:48:54: Scraping PIL._imagingtk
+2014-10-06T12:48:54: Command: E:\workspace\likestore\likestore\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py" scrape PIL._imagingtk E:\workspace\likestore\likestore\env\Lib\site-packages E:\workspace\likestore\likestore\env\.ptvs\site-packages_PIL\PIL._imagingtk
+2014-10-06T12:48:54: Output
+__import__("PIL._imagingtk")
+2014-10-06T12:48:54: [WARNING] Errors
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py", line 43, in <module>
+    __import__(mod_name)
+ImportError: DLL load failed: The specified module could not be found.
+2014-10-06T12:48:54: [ERROR] Failed to scrape PIL._imagingtk (Exit code: 1)
+2014-10-06T12:48:54: Scraping PIL._webp
+2014-10-06T12:48:54: Command: E:\workspace\likestore\likestore\env\Scripts\python.exe "C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Extensions\Microsoft\Python Tools for Visual Studio\2.1\ExtensionScraper.py" scrape PIL._webp E:\workspace\likestore\likestore\env\Lib\site-packages E:\workspace\likestore\likestore\env\.ptvs\site-packages_PIL\PIL._webp
+2014-10-06T12:48:54: Scraped 7 files
+2014-10-06T12:48:54: astropy.CallDepth = 0
+2014-10-06T12:48:54: matplotlib.CallDepth = 3
+2014-10-06T12:48:54: pandas.CallDepth = 0
+2014-10-06T12:48:54: sympy.CallDepth = 0
+2014-10-06T12:48:54: Start group "E:\workspace\likestore\likestore\env\Scripts" with 7 files
+2014-10-06T12:48:55: Parsing "activate_this" ("E:\workspace\likestore\likestore\env\Scripts\activate_this.py")
+2014-10-06T12:48:55: Parsing "pilconvert" ("E:\workspace\likestore\likestore\env\Scripts\pilconvert.py")
+2014-10-06T12:48:55: Parsing "pildriver" ("E:\workspace\likestore\likestore\env\Scripts\pildriver.py")
+2014-10-06T12:48:55: Parsing "pilfile" ("E:\workspace\likestore\likestore\env\Scripts\pilfile.py")
+2014-10-06T12:48:55: Parsing "pilfont" ("E:\workspace\likestore\likestore\env\Scripts\pilfont.py")
+2014-10-06T12:48:55: Parsing "pilprint" ("E:\workspace\likestore\likestore\env\Scripts\pilprint.py")
+2014-10-06T12:48:55: Parsing "runxlrd" ("E:\workspace\likestore\likestore\env\Scripts\runxlrd.py")
+2014-10-06T12:48:57: Parsing complete
+2014-10-06T12:48:57: Analyzing "activate_this"
+2014-10-06T12:48:57: Analyzing "pilconvert"
+2014-10-06T12:48:57: Analyzing "pildriver"
+2014-10-06T12:48:57: Analyzing "pilfile"
+2014-10-06T12:48:57: Analyzing "pilfont"
+2014-10-06T12:48:57: Analyzing "pilprint"
+2014-10-06T12:48:57: Analyzing "runxlrd"
+2014-10-06T12:48:57: Starting analysis of 7 modules
+2014-10-06T12:48:57: Analysis complete
+2014-10-06T12:48:57: Saving group "E:\workspace\likestore\likestore\env\Scripts"
+2014-10-06T12:48:57: End of group "E:\workspace\likestore\likestore\env\Scripts"
+2014-10-06T12:48:57: Start group "E:\workspace\likestore\likestore\env\Lib\site-packages\PIL" with 86 files
+2014-10-06T12:48:58: Parsing "PIL.BdfFontFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\BdfFontFile.py")
+2014-10-06T12:48:58: Parsing "PIL.BmpImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\BmpImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.BufrStubImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\BufrStubImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.ContainerIO" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ContainerIO.py")
+2014-10-06T12:48:58: Parsing "PIL.CurImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\CurImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.DcxImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\DcxImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.EpsImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\EpsImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.ExifTags" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ExifTags.py")
+2014-10-06T12:48:58: Parsing "PIL.FitsStubImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\FitsStubImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.FliImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\FliImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.FontFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\FontFile.py")
+2014-10-06T12:48:58: Parsing "PIL.FpxImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\FpxImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.GbrImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\GbrImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.GdImageFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\GdImageFile.py")
+2014-10-06T12:48:58: Parsing "PIL.GifImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\GifImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.GimpGradientFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\GimpGradientFile.py")
+2014-10-06T12:48:58: Parsing "PIL.GimpPaletteFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\GimpPaletteFile.py")
+2014-10-06T12:48:58: Parsing "PIL.GribStubImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\GribStubImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.Hdf5StubImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\Hdf5StubImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.IcnsImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\IcnsImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.IcoImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\IcoImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.Image" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\Image.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageChops" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageChops.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageCms" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageCms.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageColor" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageColor.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageDraw" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageDraw.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageDraw2" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageDraw2.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageEnhance" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageEnhance.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageFile.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageFileIO" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageFileIO.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageFilter" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageFilter.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageFont" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageFont.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageGrab" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageGrab.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageMath" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageMath.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageMode" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageMode.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageMorph" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageMorph.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageOps" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageOps.py")
+2014-10-06T12:48:58: Parsing "PIL.ImagePalette" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImagePalette.py")
+2014-10-06T12:48:58: Parsing "PIL.ImagePath" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImagePath.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageQt" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageQt.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageSequence" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageSequence.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageShow" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageShow.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageStat" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageStat.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageTk" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageTk.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageTransform" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageTransform.py")
+2014-10-06T12:48:58: Parsing "PIL.ImageWin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImageWin.py")
+2014-10-06T12:48:58: Parsing "PIL.ImImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.ImtImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\ImtImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.IptcImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\IptcImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.Jpeg2KImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\Jpeg2KImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.JpegImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\JpegImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.JpegPresets" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\JpegPresets.py")
+2014-10-06T12:48:58: Parsing "PIL.McIdasImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\McIdasImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.MicImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\MicImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.MpegImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\MpegImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.MpoImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\MpoImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.MspImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\MspImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.OleFileIO" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\OleFileIO.py")
+2014-10-06T12:48:58: Parsing "PIL.PaletteFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PaletteFile.py")
+2014-10-06T12:48:58: Parsing "PIL.PalmImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PalmImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.PcdImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PcdImagePlugin.py")
+2014-10-06T12:48:58: Parsing "PIL.PcfFontFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PcfFontFile.py")
+2014-10-06T12:48:59: Parsing "PIL.PcxImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PcxImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.PdfImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PdfImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.PixarImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PixarImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.PngImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PngImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.PpmImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PpmImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.PsdImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PsdImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.PSDraw" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PSDraw.py")
+2014-10-06T12:48:59: Parsing "PIL.PyAccess" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\PyAccess.py")
+2014-10-06T12:48:59: Parsing "PIL.SgiImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\SgiImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.SpiderImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\SpiderImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.SunImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\SunImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.TarIO" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\TarIO.py")
+2014-10-06T12:48:59: Parsing "PIL.TgaImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\TgaImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.TiffImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\TiffImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.TiffTags" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\TiffTags.py")
+2014-10-06T12:48:59: Parsing "PIL.WalImageFile" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\WalImageFile.py")
+2014-10-06T12:48:59: Parsing "PIL.WebPImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\WebPImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.WmfImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\WmfImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.XbmImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\XbmImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.XpmImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\XpmImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL.XVThumbImagePlugin" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\XVThumbImagePlugin.py")
+2014-10-06T12:48:59: Parsing "PIL._binary" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\_binary.py")
+2014-10-06T12:48:59: Parsing "PIL._util" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\_util.py")
+2014-10-06T12:48:59: Parsing "PIL" ("E:\workspace\likestore\likestore\env\Lib\site-packages\PIL\__init__.py")
+2014-10-06T12:48:59: Parsing complete
+2014-10-06T12:48:59: Analyzing "PIL.BdfFontFile"
+2014-10-06T12:48:59: Analyzing "PIL.BmpImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.BufrStubImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.ContainerIO"
+2014-10-06T12:48:59: Analyzing "PIL.CurImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.DcxImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.EpsImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.ExifTags"
+2014-10-06T12:48:59: Analyzing "PIL.FitsStubImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.FliImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.FontFile"
+2014-10-06T12:48:59: Analyzing "PIL.FpxImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.GbrImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.GdImageFile"
+2014-10-06T12:48:59: Analyzing "PIL.GifImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.GimpGradientFile"
+2014-10-06T12:48:59: Analyzing "PIL.GimpPaletteFile"
+2014-10-06T12:48:59: Analyzing "PIL.GribStubImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.Hdf5StubImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.IcnsImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.IcoImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.Image"
+2014-10-06T12:48:59: Analyzing "PIL.ImageChops"
+2014-10-06T12:48:59: Analyzing "PIL.ImageCms"
+2014-10-06T12:48:59: Analyzing "PIL.ImageColor"
+2014-10-06T12:48:59: Analyzing "PIL.ImageDraw"
+2014-10-06T12:48:59: Analyzing "PIL.ImageDraw2"
+2014-10-06T12:48:59: Analyzing "PIL.ImageEnhance"
+2014-10-06T12:48:59: Analyzing "PIL.ImageFile"
+2014-10-06T12:48:59: Analyzing "PIL.ImageFileIO"
+2014-10-06T12:48:59: Analyzing "PIL.ImageFilter"
+2014-10-06T12:48:59: Analyzing "PIL.ImageFont"
+2014-10-06T12:48:59: Analyzing "PIL.ImageGrab"
+2014-10-06T12:48:59: Analyzing "PIL.ImageMath"
+2014-10-06T12:48:59: Analyzing "PIL.ImageMode"
+2014-10-06T12:48:59: Analyzing "PIL.ImageMorph"
+2014-10-06T12:48:59: Analyzing "PIL.ImageOps"
+2014-10-06T12:48:59: Analyzing "PIL.ImagePalette"
+2014-10-06T12:48:59: Analyzing "PIL.ImagePath"
+2014-10-06T12:48:59: Analyzing "PIL.ImageQt"
+2014-10-06T12:48:59: Analyzing "PIL.ImageSequence"
+2014-10-06T12:48:59: Analyzing "PIL.ImageShow"
+2014-10-06T12:48:59: Analyzing "PIL.ImageStat"
+2014-10-06T12:48:59: Analyzing "PIL.ImageTk"
+2014-10-06T12:48:59: Analyzing "PIL.ImageTransform"
+2014-10-06T12:48:59: Analyzing "PIL.ImageWin"
+2014-10-06T12:48:59: Analyzing "PIL.ImImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.ImtImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.IptcImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.Jpeg2KImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.JpegImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.JpegPresets"
+2014-10-06T12:48:59: Analyzing "PIL.McIdasImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.MicImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.MpegImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.MpoImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.MspImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.OleFileIO"
+2014-10-06T12:48:59: Analyzing "PIL.PaletteFile"
+2014-10-06T12:48:59: Analyzing "PIL.PalmImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PcdImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PcfFontFile"
+2014-10-06T12:48:59: Analyzing "PIL.PcxImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PdfImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PixarImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PngImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PpmImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PsdImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.PSDraw"
+2014-10-06T12:48:59: Analyzing "PIL.PyAccess"
+2014-10-06T12:48:59: Analyzing "PIL.SgiImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.SpiderImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.SunImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.TarIO"
+2014-10-06T12:48:59: Analyzing "PIL.TgaImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.TiffImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.TiffTags"
+2014-10-06T12:48:59: Analyzing "PIL.WalImageFile"
+2014-10-06T12:48:59: Analyzing "PIL.WebPImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.WmfImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.XbmImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.XpmImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL.XVThumbImagePlugin"
+2014-10-06T12:48:59: Analyzing "PIL._binary"
+2014-10-06T12:48:59: Analyzing "PIL._util"
+2014-10-06T12:48:59: Analyzing "PIL"
+2014-10-06T12:48:59: Starting analysis of 86 modules
+2014-10-06T12:49:01: Analysis complete
+2014-10-06T12:49:01: Saving group "E:\workspace\likestore\likestore\env\Lib\site-packages\PIL"
+2014-10-06T12:49:02: End of group "E:\workspace\likestore\likestore\env\Lib\site-packages\PIL"
+2014-10-06T12:49:02: Deleting 0 files
+
+2014-10-07T13:14:02: Start analysis
+2014-10-07T13:14:03: IncludeModulesFromModulePath = win32com
+2014-10-07T13:14:03: Deleting 0 files
+2014-10-07T13:14:03: astropy.CallDepth = 0
+2014-10-07T13:14:03: matplotlib.CallDepth = 3
+2014-10-07T13:14:03: pandas.CallDepth = 0
+2014-10-07T13:14:03: sympy.CallDepth = 0
+2014-10-07T13:14:03: Start group "E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify" with 5 files
+2014-10-07T13:14:04: Parsing "jsonify.decorators" ("E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify\decorators.py")
+2014-10-07T13:14:04: Parsing "jsonify.models" ("E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify\models.py")
+2014-10-07T13:14:04: Parsing "jsonify" ("E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify\__init__.py")
+2014-10-07T13:14:04: Parsing "jsonify.templatetags.jsonify" ("E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify\templatetags\jsonify.py")
+2014-10-07T13:14:04: Parsing "jsonify.templatetags" ("E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify\templatetags\__init__.py")
+2014-10-07T13:14:04: Parsing complete
+2014-10-07T13:14:04: Analyzing "jsonify.decorators"
+2014-10-07T13:14:04: Analyzing "jsonify.models"
+2014-10-07T13:14:04: Analyzing "jsonify"
+2014-10-07T13:14:04: Analyzing "jsonify.templatetags.jsonify"
+2014-10-07T13:14:04: Analyzing "jsonify.templatetags"
+2014-10-07T13:14:04: Starting analysis of 5 modules
+2014-10-07T13:14:04: Analysis complete
+2014-10-07T13:14:04: Saving group "E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify"
+2014-10-07T13:14:04: End of group "E:\workspace\likestore\likestore\env\Lib\site-packages\jsonify"
+2014-10-07T13:14:05: Deleting 0 files
+
+2014-10-07T13:40:07: Start analysis
+2014-10-07T13:40:07: IncludeModulesFromModulePath = win32com
+2014-10-07T13:40:07: Deleting 5 files
+
+2014-10-09T11:08:46: Start analysis
+2014-10-09T11:08:46: IncludeModulesFromModulePath = win32com
+2014-10-09T11:08:46: Deleting 0 files
+2014-10-09T11:08:46: astropy.CallDepth = 0
+2014-10-09T11:08:46: matplotlib.CallDepth = 3
+2014-10-09T11:08:46: pandas.CallDepth = 0
+2014-10-09T11:08:46: sympy.CallDepth = 0
+2014-10-09T11:08:46: Start group "E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms" with 16 files
+2014-10-09T11:08:47: Parsing "sendsms.api" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\api.py")
+2014-10-09T11:08:48: Parsing "sendsms.exceptions" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\exceptions.py")
+2014-10-09T11:08:48: Parsing "sendsms.message" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\message.py")
+2014-10-09T11:08:48: Parsing "sendsms.signals" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\signals.py")
+2014-10-09T11:08:48: Parsing "sendsms.utils" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\utils.py")
+2014-10-09T11:08:48: Parsing "sendsms" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\__init__.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.base" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\base.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.console" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\console.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.dummy" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\dummy.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.esendex" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\esendex.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.filebased" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\filebased.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.locmem" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\locmem.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.smspubli" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\smspubli.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.smssluzbacz" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\smssluzbacz.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends.twiliorest" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\twiliorest.py")
+2014-10-09T11:08:48: Parsing "sendsms.backends" ("E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms\backends\__init__.py")
+2014-10-09T11:08:48: Parsing complete
+2014-10-09T11:08:48: Analyzing "sendsms.api"
+2014-10-09T11:08:48: Analyzing "sendsms.exceptions"
+2014-10-09T11:08:48: Analyzing "sendsms.message"
+2014-10-09T11:08:48: Analyzing "sendsms.signals"
+2014-10-09T11:08:48: Analyzing "sendsms.utils"
+2014-10-09T11:08:48: Analyzing "sendsms"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.base"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.console"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.dummy"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.esendex"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.filebased"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.locmem"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.smspubli"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.smssluzbacz"
+2014-10-09T11:08:48: Analyzing "sendsms.backends.twiliorest"
+2014-10-09T11:08:48: Analyzing "sendsms.backends"
+2014-10-09T11:08:48: Starting analysis of 16 modules
+2014-10-09T11:08:48: Analysis complete
+2014-10-09T11:08:48: Saving group "E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms"
+2014-10-09T11:08:48: End of group "E:\workspace\likestore\likestore\env\Lib\site-packages\sendsms"
+2014-10-09T11:08:48: Deleting 0 files

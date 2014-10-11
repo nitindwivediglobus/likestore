@@ -275,7 +275,9 @@
 		height: 40px;
 	}
 }
-
+.navextra {
+    background-image: url("/static/assets/img/navbar.png");
+}
 /*Navbar*/
 @media (min-width: 992px) {
 	.header .navbar-nav {

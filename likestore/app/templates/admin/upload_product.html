@@ -1,0 +1,19 @@
+{% extends "admin/index.html" %}
+
+{% block content %}
+{% load staticfiles %}
+
+<!-- Fine Uploader DOM Element
+====================================================================== -->
+<!-- Fine Uploader template
+====================================================================== -->
+
+<script type="text/template" id="qq-template-bootstrap"></script>
+
+<form enctype="multipart/form-data" action="/uploadproducts" method="post">{% csrf_token %}
+<input type="text" name="mycsvfile">
+<input type="submit" name="upload" value="Upload">
+</form>
+
+	
+{% endblock %}
