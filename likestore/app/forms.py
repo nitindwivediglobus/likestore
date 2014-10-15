@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Definition of forms.
 """
@@ -22,6 +23,10 @@ class BootstrapAuthenticationForm(AuthenticationForm):
 class ImageUploadForm(forms.Form):
     """Image upload form."""
     image_files = forms.ImageField()
+
+class FileUploadForm(forms.Form):
+    """Image upload form."""
+    product_files = forms.FileField()
 
 #right now not using
 class UserForm(ModelForm):

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Definition of views.
 """
@@ -14,7 +15,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout, authenticate, login
 
 def home(request):     
-    print ('hiiii')
+    #print ('hiiii')
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
     return render(

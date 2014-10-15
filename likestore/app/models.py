@@ -142,3 +142,16 @@ class Users(models.Model):
 
     class Meta:
         db_table = 'users'
+
+
+class Layout(models.Model):
+    image = models.FileField(upload_to='')
+
+    class Meta:
+        db_table = 'layout'
+
+class Prolayout(models.Model):
+    productfile = models.FileField(upload_to='')
+
+    class Meta:
+        db_table = 'prolayout'

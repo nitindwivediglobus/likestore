@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 """
 Definition of views.
 """
@@ -70,7 +72,7 @@ def filter(request):
             x=2
         if sortdata=='New':
             xquery=query+' ORDER BY ProductUpdateDate'
-        print query
+        #print query
         #for cat in filterarray:
         #    query = query,cat
         products = Products.objects.raw(query)#SELECT * FROM products WHERE ProductCategoryId in (4,5) and ProductLocation in ("Moscow") ProductPrice between 10 and 200 ORDER BY ProductPrice 
@@ -79,16 +81,16 @@ def filter(request):
         return HttpResponse(json.dumps(data), content_type="application/json")
 
 def catgift(request, cat):
-    print ('hiiii')
-    print (cat)
+    #print ('hiiii')
+    #print (cat)
     products = Products.objects.raw('SELECT * FROM products WHERE ProductCategoryId ='+ cat)
     template=loader.get_template("app/browse.html")
     rc=RequestContext(request,{'products':products})
     return HttpResponse(template.render(rc))
 
 def bestfor(request, cat):
-    print ('hiiii')
-    print (cat)
+    #print ('hiiii')
+    #print (cat)
     products = Products.objects.raw('SELECT * FROM products WHERE ProductBestFor ='+ cat)
     template=loader.get_template("app/browse.html")
     rc=RequestContext(request,{'products':products})
@@ -112,7 +114,7 @@ def  saveorderdetails(request):
                        orderemail=form['r_email'],orderdate=lastconnection,
                        ordershipaddress = form['r_info'],ordertrackingnumber=tokentrack,)
         order.save()
-        orderid=order.orderid
+        oid=order.orderid
         
         product = Products.objects.raw('SELECT * FROM products WHERE ProductId ='+ str(productid))[0]
         ammountperpice=product.productprice
@@ -124,11 +126,11 @@ def  saveorderdetails(request):
         #orderdet = Orderdetails(detailname = form['fname'])
         #orderdet.save()
         template = loader.get_template("app/payment.html")
-        rc = RequestContext(request,{'orderid':orderid},{'paymentmoney':paymentmoney},{'productdesc':productdesc},{'Qty':Qty})
+        rc = RequestContext(request,{'orderid': oid,'paymentmoney': paymentmoney,'productdesc': productdesc,'Qty': Qty})
         return HttpResponse(template.render(rc))
 
 def sendgift(request):
-    print ('hiiii')
+    #print ('hiiii')
     try:
        user_id = request.session['user']
        user = Users.objects.raw('SELECT * FROM users WHERE UserID ='+user_id)
@@ -144,7 +146,7 @@ def sendgift(request):
 
 
 def search(request, keyword):
-    print (keyword)
+    #print (keyword)
     #keyword=keyword.replace('%20',' ')
     querey = 'SELECT * FROM products WHERE ProductName LIKE \'%%'+keyword+'%%\''
     products = Products.objects.raw(querey)
@@ -153,8 +155,8 @@ def search(request, keyword):
     return HttpResponse(template.render(rc))
 
 def selgift(request, id):
-    print ('hiiii')
-    print (id)
+    #print ('hiiii')
+    #print (id)
     product = Products.objects.raw('SELECT * FROM products WHERE ProductId ='+ id)[0]
     try:
         stock=product.productstock+1
@@ -175,8 +177,8 @@ def selgift(request, id):
     return HttpResponse(template.render(rc))
 
 def ordergift(request, id):
-    print ('hiiii')
-    print (id)
+    #print ('hiiii')
+    #print (id)
     products = Products.objects.raw('SELECT * FROM products WHERE ProductId ='+ id)[0]
     try:
       user_id = request.session['user']
@@ -203,7 +205,7 @@ def sendmail(To, Messege, subject):
     email = EmailMessage(Messege, subject, to=[To])
     email.send()
     send_mail(subject, Messege, 'nitindwivedi@globussoft.com',[To], fail_silently=False)
-    return 'success'
+    return
 
 def sendsms(request):
     from sendsms.message import SmsMessage
@@ -219,7 +221,7 @@ def token(a,b):
 
 
 def receivegift(request):
-    print ('hiiii')
+    #print ('hiiii')
     if (request.is_ajax()):
         trackcode = request.GET['trackcode']
         user_id = request.session['user']
@@ -240,7 +242,7 @@ def receivegift(request):
             return HttpResponse(json.dumps(data), content_type="application/json")
             
         else:
-            print('not authorized')
+            #print('not authorized')
             result = 'NOT AUTHORIZED'
             data = {'result':result}
             return HttpResponse(json.dumps(data), content_type="application/json")

@@ -63,8 +63,8 @@ urlpatterns = patterns('',
     url(r'^saveimage', saveimage, name='saveimage'),
     url(r'^myproducts/(?P<cat>\w{0,2})/$', myproducts, name='myproducts'),
     url(r'^allproducts', allproducts, name='allproducts'),
-    url(r'^uploadproducts', uploadproducts, name='uploadproducts'),
-    url(r'^uproducts', uproducts, name='uproducts'),
+    #url(r'^uploadproducts', uploadproducts, name='uploadproducts'),
+    #url(r'^uproducts', uproducts, name='uproducts'),
     url(r'^oneproduct', oneproduct, name='oneproduct'),
     url(r'^updateproduct', updateproduct, name='updateproduct'),
     url(r'^delproduct/(?P<pid>\w{0,2})$', delproduct, name='delproduct'),
@@ -72,6 +72,7 @@ urlpatterns = patterns('',
     url(r'^oneorder', oneorder, name='oneorder'),
     url(r'^updateorder', updateorder, name='updateorder'),
     url(r'^delorder/(?P<oid>\w{0,2})$', delorder, name='delorder'),
+    url(r'^uploadproductsfile', uploadproductsfile, name='uploadproductsfile'),
 
 
 

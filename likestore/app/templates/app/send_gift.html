@@ -1,4 +1,4 @@
-{% extends "app/guestbase.html" %}
+﻿{% extends "app/guestbase.html" %}
 
 {% block content %}
  {% load staticfiles %}
@@ -6,8 +6,8 @@
 <!--     <div class="search-block parallaxBg"> -->
         <div class="container">
             <div class="title-box-v2">
-                <h1 class="pull-left color-green"><i class="fa fa-gift fa-fw"></i>Send A Gifts</h1><h1 class="pull-left"> &nbsp;Find this from to send gift</h1>
-                <h6 class="color-green"><i class="fa fa-exclamation-circle fa-3x"></i>need help?</h6>
+                <h1 class="pull-left color-green"><i class="fa fa-gift fa-fw"></i>Отправить подарок</h1><h1 class="pull-left"> &nbsp;Найти это от направить подарок</h1>
+                <h6 class="color-green"><i class="fa fa-exclamation-circle fa-3x"></i>нужна помощь?</h6>
             </div>
         </div>    
  <!--    </div>/container   -->   
@@ -38,7 +38,7 @@
                         <span class="color-light id="readmeat">Voucher can be redeemed at Bangalore,India<br> between 9/9/2014 to 10/10/2014</span>
                     </dl>
             </div>
-        <h4 class="col-lg-offset-3">This preview of your gift card</h4>
+        <h4 class="col-lg-offset-3">Это предварительный просмотр своей подарочной карты</h4>
     </div>
 
     <div class="col-md-6">
@@ -49,7 +49,7 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" id="recipter" href="#collapse-One">
-                                   #1 Tell us about the recipient and the gift
+                                   #1 Расскажите нам о получателе и даром
                                 </a>
                             </h4>
                         </div>
@@ -63,13 +63,13 @@
                                                     <section class="col col-6">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-user"></i>
-                                                            <input type="text" id="r_fname" name="r_fname" required placeholder="First Name">
+                                                            <input type="text" id="r_fname" name="r_fname" required placeholder="имя">
                                                         </label>
                                                     </section>
                                                     <section class="col col-6">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-user"></i>
-                                                            <input type="text" id="r_lname" name="r_lname" placeholder="Last Name">
+                                                            <input type="text" id="r_lname" name="r_lname" placeholder="фамилия">
                                                         </label>
                                                     </section>
                                                 </div>
@@ -78,7 +78,7 @@
                                                     <section class="col col-md-12">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-envelope"></i>
-                                                            <input type="email" id="r_email"  name="r_email" placeholder="E-mail Address">
+                                                            <input type="email" id="r_email"  name="r_email" placeholder="Адрес электронной почты">
                                                         </label>
                                                     </section>
                                                 </div>
@@ -87,7 +87,7 @@
                                                     <section class="col col-md-12">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-phone"></i>
-                                                            <input type="phone" id="r_phone" name="r_phone" placeholder="Phone ...">
+                                                            <input type="phone" id="r_phone" name="r_phone" placeholder="Телефон ...">
                                                         </label>
                                                     </section>
                                                 </div>
@@ -96,7 +96,7 @@
                                                     <section class="col col-md-12">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-spinner"></i>
-                                                            <input type="merchant" id="r_merchant" name="r_merchant" placeholder="Merchant">
+                                                            <input type="merchant" id="r_merchant" name="r_merchant" placeholder="Торговец">
                                                         </label>
                                                     </section>
                                                 </div>
@@ -137,25 +137,25 @@
                                                     <section class="col col-md-12">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-calendar"></i>
-                                                            <input type="text" id="start" name="r_start" placeholder="Expected start date">
+                                                            <input type="text" id="start" name="r_start" placeholder="Ожидаемая дата начала">
                                                         </label>
                                                     </section>
                                                 </div>
                                                   <section>
                                                     <label class="textarea">
-                                                        <textarea rows="3" id="r_info" name="r_info" placeholder="Shipping Address"></textarea>
+                                                        <textarea rows="3" id="r_info" name="r_info" placeholder="Адрес доставки"></textarea>
                                                     </label>
                                                 </section>
                                                 <section>
                                                     <label class="input">
-                                                        <input type="text" id="r_city" name="r_city" placeholder="City">
+                                                        <input type="text" id="r_city" name="r_city" placeholder="Город">
                                                     </label>
                                                 </section>
 
                                                 <div class="row">
                                                     <section class="col col-md-6">
                                                         <label class="input">
-                                                            <input type="text" id="r_State" name="r_State" placeholder="State">
+                                                            <input type="text" id="r_State" name="r_State" placeholder="государство">
                                                         </label>
                                                     </section>
                                                     <section class="col col-md-6">
@@ -167,19 +167,19 @@
                                                 <div class="row">
                                                     <section>
                                                         <div class="inline-group">
-                                                            <label class="radio"><input type="radio" name="radio-inline" checked><i class="rounded-x"></i>SMS</label>
-                                                            <label class="radio"><input type="radio" name="radio-inline"><i class="rounded-x"></i>EMAIL</label>
-                                                            <label class="radio"><input type="radio" name="radio-inline"><i class="rounded-x"></i>POSTAL ADDRESS</label>
+                                                            <label class="radio"><input type="radio" name="radio-inline" checked><i class="rounded-x"></i>смс</label>
+                                                            <label class="radio"><input type="radio" name="radio-inline"><i class="rounded-x"></i>E-MAIL</label>
+                                                            <label class="radio"><input type="radio" name="radio-inline"><i class="rounded-x"></i>Почтовый адрес</label>
                                                         </div>
                                                     </section>
                                                 </div>      
 
-                                                 <a data-toggle="collapse" data-parent="#accordion-1" href="" id="send-item" class="button" onclick="javascript:validate1()">Next Step</a>
+                                                 <a data-toggle="collapse" data-parent="#accordion-1" href="" id="send-item" class="button" onclick="javascript:validate1()">Следующий шаг</a>
                                                 <div class="progress"></div> 
 
                                                 <div class="message">
                                                     <i class="rounded-x fa fa-check"></i>
-                                                    <p>Thanks for your order!<br>We'll contact you very soon.</p>
+                                                    <p>Спасибо за ваш заказ!<br>Мы свяжемся с вами в ближайшее время.</p>
                                                 </div>
        
                 <!-- End Order Form -->
@@ -193,7 +193,7 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Two" id="secondform">
-                                    #2 Tell us about You
+                                    #2 Расскажите о себе
                                 </a>
                             </h4>
                         </div>
@@ -207,13 +207,13 @@
                                                     <section class="col col-6">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-user"></i>
-                                                            <input type="text" name="fname" id="fname" placeholder="First Name" value="{{user.userfirstname}}">
+                                                            <input type="text" name="fname" id="fname" placeholder="имя" value="{{user.userfirstname}}">
                                                         </label>
                                                     </section>
                                                     <section class="col col-6">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-user"></i>
-                                                            <input type="text" name="lname" id="lname" placeholder="Last Name" value="{{user.userlastname}}">
+                                                            <input type="text" name="lname" id="lname" placeholder="фамилия" value="{{user.userlastname}}">
                                                         </label>
                                                     </section>
                                                 </div>
@@ -222,7 +222,7 @@
                                                     <section class="col col-md-12">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-envelope"></i>
-                                                            <input type="email" name="email"  id="email"  placeholder="E-mail Address" value="{{user.useremail}}" >
+                                                            <input type="email" name="email"  id="email"  placeholder="Адрес электронной почты" value="{{user.useremail}}" >
                                                         </label>
                                                     </section>
                                                 </div>
@@ -231,18 +231,18 @@
                                                     <section class="col col-md-12">
                                                         <label class="input">
                                                             <i class="icon-append fa fa-phone"></i>
-                                                            <input type="phone" name="phone" id="phone"  placeholder="Phone ..." value="{{user.userphone}}">
+                                                            <input type="phone" name="phone" id="phone"  placeholder="Телефон ..." value="{{user.userphone}}">
                                                         </label>
                                                     </section>
                                                 </div>    
 
                                     <!--            <button type="Back" class="btn-u btn-u-default">Back</button>-->
-                                                <a data-toggle="collapse" data-parent="#accordion-1" href="" id="sender" class="btn-u" onclick="javascript:validate2()">Next Step</a> 
+                                                <a data-toggle="collapse" data-parent="#accordion-1" href="" id="sender" class="btn-u" onclick="javascript:validate2()">Следующий шаг</a> 
                                                 <div class="progress"></div>
 
                                                 <div class="message">
                                                     <i class="rounded-x fa fa-check"></i>
-                                                    <p>Thanks for your order!<br>We'll contact you very soon.</p>
+                                                    <p>Спасибо за ваш заказ!<br>Мы свяжемся с вами в ближайшее время.</p>
                                                 </div>
 
                                                
@@ -257,7 +257,7 @@
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-Three">
-                                    #3 Check Out
+                                    #3 проверить
                                 </a>
                             </h4>
                         </div>
@@ -270,25 +270,25 @@
                         
                                                 <section>
                                                     <label class="input">
-                                                        <input type="text" name="name" id="name" placeholder="Your Full Name">
+                                                        <input type="text" name="name" id="name" placeholder="Ваше полное имя">
                                                     </label>
                                                 </section>
 
                                                 <section>
                                                     <label class="textarea">
-                                                        <textarea rows="3" name="info" id="info" placeholder="Billing Address"></textarea>
+                                                        <textarea rows="3" name="info" id="info" placeholder="Адрес для выставления счета"></textarea>
                                                     </label>
                                                 </section>
                                                 <section>
                                                     <label class="input">
-                                                        <input type="text" name="city" id="city" placeholder="City">
+                                                        <input type="text" name="city" id="city" placeholder="Город">
                                                     </label>
                                                 </section>
 
                                                 <div class="row">
                                                     <section class="col col-md-6">
                                                         <label class="input">
-                                                            <input type="text" name="State" id="State" placeholder="State">
+                                                            <input type="text" name="State" id="State" placeholder="государство">
                                                         </label>
                                                     </section>
                                                     <section class="col col-md-6">
@@ -301,7 +301,7 @@
                                                 <div class="row">
                                                     <section class="col col-10">
                                                         <label class="input">
-                                                            <input type="text" name="card" id="card" placeholder="Card number">
+                                                            <input type="text" name="card" id="card" placeholder="номер карты">
                                                         </label>
                                                     </section>
                                                     <section class="col col-2">
@@ -312,23 +312,23 @@
                                                 </div>
                                                 
                                                 <div class="row">
-                                                    <label class="label col col-4">Expiration date</label>
+                                                    <label class="label col col-4">срок годности</label>
                                                     <section class="col col-5">
                                                         <label class="select">
                                                             <select name="month" id="month">
                                                                <!-- <option value="0" selected disabled>Month</option>-->
-                                                                <option>January</option>
-                                                                <option>February</option>
-                                                                <option >March</option>
-                                                                <option>April</option>
-                                                                <option>May</option>
-                                                                <option>June</option>
-                                                                <option>July</option>
-                                                                <option>August</option>
-                                                                <option>September</option>
-                                                                <option>October</option>
-                                                                <option>November</option>
-                                                                <option>December</option>
+                                                                <option>Январь</option>
+                                                                <option>февраля</option>
+                                                                <option >Март</option>
+                                                                <option>Апрель</option>
+                                                                <option>Май</option>
+                                                                <option>Июнь</option>
+                                                                <option>Июль</option>
+                                                                <option>Август</option>
+                                                                <option>Сентябрь</option>
+                                                                <option>Октябрь</option>
+                                                                <option>Ноябрь</option>
+                                                                <option>Декабрь</option>
                                                             </select>
                                                             <i></i>
                                                         </label>
@@ -341,12 +341,12 @@
                                                 </div>
 
                                       <!--          <button type="Back" class="btn-u btn-u-default">Back</button>   -->
-                                                <button type="submit" class="btn-u">Send Gift</button>
+                                                <button type="submit" class="btn-u">Отправить подарок</button>
                                                 <div class="progress"></div>
 
                                                 <div class="message">
                                                     <i class="rounded-x fa fa-check"></i>
-                                                    <p>Thanks for your order!<br>We'll contact you very soon.</p>
+                                                    <p>Спасибо за ваш заказ!<br>Мы свяжемся с вами в ближайшее время.</p>
                                                 </div>
 
                                                 

@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponseRedirect,HttpRequest, HttpResponse
 from django.template import loader,RequestContext
@@ -67,14 +67,14 @@ def logoutadmin(request):
     )
 
 def myusers(request):
-    print ('hiiii')
+    #print ('hiiii')
     users = Users.objects.raw('SELECT * FROM users')
     template=loader.get_template("admin/userlist.html")
     rc=RequestContext(request,{'users':users})
     return HttpResponse(template.render(rc))
 
 def oneuser(request):
-    print ('hiiii')
+    #print ('hiiii')
     if (request.is_ajax()):
         userid = request.GET['userid']
         thisuser = Users.objects.raw('SELECT * FROM users WHERE userid = '+userid)
@@ -84,7 +84,7 @@ def oneuser(request):
 
 @csrf_protect
 def updateuser(request):
-    print ('hiiii')
+    #print ('hiiii')
     if request.method == 'POST':
         form = request.POST
         user = Users(userid= form['newid'], useremail = form['newemail'], userpassword= form['newpass'], userfirstname = form['newfname'], 
@@ -96,27 +96,27 @@ def updateuser(request):
         return HttpResponseRedirect('/myusers')
 
 def deleteuser(request, uid):
-    print ('hiiii'+uid)
+    #print ('hiiii'+uid)
     Users.objects.filter(userid=uid).delete()
     return HttpResponseRedirect('/myusers')
 
 def myproducts(request, cat):
-    print ('hiiii')
-    print (cat)
+    #print ('hiiii')
+    #print (cat)
     products = Products.objects.raw('SELECT * FROM products WHERE ProductCategoryId ='+ cat)
     template=loader.get_template("admin/tables_datatables.html")
     rc=RequestContext(request,{'products':products})
     return HttpResponse(template.render(rc))
 
 def allproducts(request):
-    print ('hiiii')
+    #print ('hiiii')
     products = Products.objects.raw('SELECT * FROM products')
     template=loader.get_template("admin/tables_datatables.html")
     rc=RequestContext(request,{'products':products})
     return HttpResponse(template.render(rc))
 
 def oneproduct(request):
-    print ('hiiii')
+    #print ('hiiii')
     if (request.is_ajax()):
         productid = request.GET['productid']
         thisproduct = Products.objects.raw('SELECT * FROM products WHERE productid = '+productid)
@@ -126,7 +126,7 @@ def oneproduct(request):
 
 @csrf_protect
 def updateproduct(request):
-    print ('hiiii')
+    #print ('hiiii')
     if request.method == 'POST':
         form = request.POST
         price = float(form['newprice'])
@@ -142,19 +142,19 @@ def updateproduct(request):
         return HttpResponseRedirect('/allproducts')
 
 def delproduct(request, pid):
-    print ('hiiii'+pid)
+    #print ('hiiii'+pid)
     Products.objects.filter(productid=pid).delete()
     return HttpResponseRedirect('/allproducts')
 
 def allorders(request):
-    print ('hiiii')
+    #print ('hiiii')
     orders = Orders.objects.raw('SELECT * FROM orders')
     template=loader.get_template("admin/orderlist.html")
     rc=RequestContext(request,{'orders':orders})
     return HttpResponse(template.render(rc))
 
 def oneorder(request):
-    print ('hiiii')
+    #print ('hiiii')
     if (request.is_ajax()):
         orderid = request.GET['orderid']
         thisorder = Orders.objects.raw('SELECT * FROM orders WHERE orderid = '+orderid)
@@ -164,7 +164,7 @@ def oneorder(request):
 
 @csrf_protect
 def updateorder(request):
-    print ('hiiii')
+    #print ('hiiii')
     if request.method == 'POST':
         form = request.POST
         amount = float(form['amount'])
@@ -179,7 +179,7 @@ def updateorder(request):
         return HttpResponseRedirect('/allorders')
 
 def delorder(request, oid):
-    print ('hiiii'+oid)
+    #print ('hiiii'+oid)
     Orders.objects.filter(orderid=oid).delete()
     return HttpResponseRedirect('/allorders')
 
@@ -195,18 +195,6 @@ def uploadimage(request):
         }
     )
 
-def uproducts(request):
-    """Renders the about page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'admin/upload_product.html',
-        
-        {
-            'title':'About',
-            'message':'Your application description page.',
-        }
-    )
 
 def saveimage(request):
     if request.method == 'POST':
@@ -216,4 +204,51 @@ def saveimage(request):
                 layout = Layout(image=oneimage)
                 layout.save()
             return HttpResponse('image upload success')
+    return HttpResponse('allowed only via POST')
+
+def uploadproductsfile(request):
+    if request.method == 'POST':
+        form = FileUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            for onefile in request.FILES.getlist('product_files'):
+                prolayout = Prolayout(productfile=onefile)
+                prolayout.save()
+                Project_Root = path.dirname(path.abspath(path.dirname(__file__)))
+                Media_Root = path.join(Project_Root, 'static/assets/img/main').replace('\\', '/')
+                csv_filepathname = Media_Root+'/products_Upload.csv'
+
+                import csv
+                with open(csv_filepathname, 'r') as csvfile:
+                    dataReader = csv.reader(csvfile, delimiter=',', quotechar='"')
+
+                    for row in dataReader:
+                        if row[0] != 'ProductID': # Ignore the header row, import everything else
+                            products = Products()
+                            products.productsku = row[0]
+                            products.productname = row[1]
+                            products.productprice = row[2]
+                            products.productweight = row[3]
+                            products.productbestfor = row[4]
+                            products.productcartdesc = row[5]
+                            products.productshortdesc = row[6]
+                            products.productlongdesc = row[7]
+                            products.productsize = row[8]
+                            products.productcolor = row[9]
+                            products.productrating = row[10]
+                            products.productthumb = row[11]
+                            products.productimage = row[12]
+                            products.productimage2 = row[13]
+                            products.productimage3 = row[14]
+                            products.productcategoryid = row[15]
+                            products.productupdatedate = row[16]
+                            products.productstock = row[17]
+                            products.productlive = row[18]
+                            products.productunlimited = row[19]
+                            products.productlocation = row[20]
+                            products.save()
+                    products = Products.objects.raw('SELECT * FROM products')
+                    template=loader.get_template("admin/tables_datatables.html")
+                    rc=RequestContext(request,{'products':products})
+                os.remove(csv_filepathname)
+                return HttpResponse(template.render(rc))
     return HttpResponse('allowed only via POST')

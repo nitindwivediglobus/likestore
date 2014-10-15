@@ -1,4 +1,4 @@
-{% extends "app/guestbase.html" %}
+﻿{% extends "app/guestbase.html" %}
 
 {% block content %}
 {% load staticfiles %}
@@ -8,8 +8,8 @@
 <!--     <div class="search-block parallaxBg"> -->
         <div class="container content">
             <div class="title-box-v2">
-                <h1 class="pull-left color-green"><i class="fa fa-gift fa-fw"></i>Send A Gifts</h1><h1 class="pull-left"> &nbsp;Find this from to send gift</h1>
-                <h6 class="pull-right color-green"><i class="fa fa-exclamation-circle fa-1x"></i>need help?</h6>
+                <h1 class="pull-left color-green"><i class="fa fa-gift fa-fw"></i>Отправить как ПОДАРОК</h1><h1 class="pull-left"> &nbsp;Отправить как ПОДАРОК</h1>
+                <h6 class="pull-right color-green"><i class="fa fa-exclamation-circle fa-1x"></i>нужна помощь ?</h6>
             </div>
         </div>    
  <!--    </div>/container   -->   
@@ -24,13 +24,13 @@
                         <div class="item active">
                             <img src="/static/{{product.productimage}}" alt="">
                             <div class="carousel-caption">
-                                <p>Front Side</p>
+                                <p>передняя</p>
                             </div>
                         </div>
                         <div class="item">
                             <img src="/static/{{product.productimage2}}" alt="">
                             <div class="carousel-caption">
-                                <p>Back Side</p>
+                                <p>Вернуться Боковой</p>
                             </div>
                             </div>
                         <div class="item">
@@ -113,7 +113,7 @@
                             <label><i class="fa fa-exchange fa-fw"></i></label>Compare
                         </section>-->
                         <section>
-                            <label class="label">Color</label>
+                            <label class="label">Цвет</label>
                             <label class="select">
                                 <select id="color">
                                     {% for c in color %}
@@ -125,7 +125,7 @@
                         </section>
                         
                         <section>
-                            <label class="label">Size</label>
+                            <label class="label">Размер</label>
                             <label class="select">
                                 <select id="ordersize">
                                     {% for m in size %}
@@ -137,7 +137,7 @@
                         </section>
 
                         <section>
-                            <label class="label">Quantity</label>
+                            <label class="label">Количество</label>
                             <label class="select">
                                 <select id="quantity">
                                     {% for i in range %}
@@ -151,20 +151,20 @@
                                 <i></i>
                             </label>
                         </section>
-                        <a class="btn-u" onclick="javascript:orderproduct({{product.productid}})">Send</a>
+                        <a class="btn-u" onclick="javascript:orderproduct({{product.productid}})">Отправить</a>
                  
                     </fieldset>
                         <fieldset>
                         <div class="tab-v1 margin-bottom-60">
                             <ul class="nav nav-tabs">
-                                <li class="active"><a href="#home-1" data-toggle="tab">Description</a></li>
-                                <li class=""><a href="#profile-1" data-toggle="tab">Review</a></li>
+                                <li class="active"><a href="#home-1" data-toggle="tab">Описание</a></li>
+                                <li class=""><a href="#profile-1" data-toggle="tab">Обзор</a></li>
                             </ul>                
                             <div class="tab-content">
                                 <!-- Icons and Placeholders -->
                                 <div class="tab-pane fade active in" id="home-1">
                                     <form action="" class="sky-form">
-                                        <header>Description</header>
+                                        <header>Описание</header>
                                        <p>khs fu gfgbrui uwr grghbrhgb yugbirugh sjgbuisg bough wugb owuhihudfvkjgvnsilwisug sugh w8oghwugwrg wuog w7 g ywfyi guowr guwhg w uorh grgh uwrh g ruih sfuvh fukghu rsdfhfweuifh weuis 79wsgisbvhsr f7u afgsyidg yisyi siweyi yif ruis gvgv fvfh </p> 
                                        
                                     </form>
@@ -174,7 +174,7 @@
                                 <!-- Tooltips -->
                                 <div class="tab-pane fade " id="profile-1">
                                     <form action="" class="sky-form">
-                                        <header>Review</header>
+                                        <header>Обзор</header>
                                         <p>Chanchal Kumar Santra jkgngr ighruo ghrugh rughrug r gheruigbutguj euigherujgerui ger grugh rug urhgu rhgure guerhgu rehguergu euv ej bufguobju dhedjber ghjfvor gjlwgui rgbksg uishgjbsui gh usjbg rg rugr grug huergour hguorhuog hruogh sru og whiognwrg nkjxcb uihksfjvbui hvkjfobidfnkvjh fuov s;g sfu hsfo </p>
                                     </form>
                                 </div>
