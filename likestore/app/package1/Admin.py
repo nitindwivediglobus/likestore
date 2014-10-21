@@ -196,7 +196,7 @@ def uploadimage(request):
     )
 
 
-def saveimage(request):
+def saveproductimage(request):
     if request.method == 'POST':
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
@@ -206,7 +206,22 @@ def saveimage(request):
             return HttpResponse('image upload success')
     return HttpResponse('allowed only via POST')
 
+
+def uploadproducts(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'admin/upload_product.html',
+        
+        {
+            'title':'About',
+            'message':'Your application description page.',
+        }
+    )
+
+@csrf_protect
 def uploadproductsfile(request):
+    print('uploading file')
     if request.method == 'POST':
         form = FileUploadForm(request.POST, request.FILES)
         if form.is_valid():
@@ -235,10 +250,10 @@ def uploadproductsfile(request):
                             products.productsize = row[8]
                             products.productcolor = row[9]
                             products.productrating = row[10]
-                            products.productthumb = row[11]
-                            products.productimage = row[12]
-                            products.productimage2 = row[13]
-                            products.productimage3 = row[14]
+                            products.productthumb = 'assets/img/main/'+row[11]
+                            products.productimage = 'assets/img/main/'+row[12]
+                            products.productimage2 = 'assets/img/main/'+row[13]
+                            products.productimage3 = 'assets/img/main/'+row[14]
                             products.productcategoryid = row[15]
                             products.productupdatedate = row[16]
                             products.productstock = row[17]

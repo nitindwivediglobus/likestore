@@ -3,15 +3,110 @@
 {% block content %}
 {% load staticfiles %}
 
+   <div class="search-block parallaxBg">
+        <!-- Navbar -->
+        <div class="navbar navbar-default navtransparent" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Переключить навигации</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img id="logo-header" src="{% static 'assets/img/shop-32.png'%}" alt="LikeGift">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse pull-left">
+                    <ul class="nav navbar-nav">
+                        <!-- Home -->
+                        <li class="topbar-devider"></li>  
+                         <li  class="greenhf">
+                            <a href="" class="dropdown-toggle">
+                                СПА
+                            </a>
+                        </li>
+                        <!-- End Home -->
+
+                        <!-- Pages -->                        
+                        <li class="greenhf">
+                            <a >
+                                РЕСТОРАНЫ
+                            </a>
+                        </li>
+                        <!-- End Pages -->
+
+                        <!-- Features -->
+                        <li class="greenhf">
+                            <a >
+                                ОДЕЖДА
+                            </a>
+                        </li>
+                        <!-- End Features -->
+
+                        <!-- Portfolio -->
+                        <li class="greenhf">
+                            <a >
+                                ОТДЫХ
+                            </a>
+                        </li>
+                        <!-- Ens Portfolio -->
+
+                        <!-- Blog -->
+                        <li class="greenhf">
+                            <a >
+                                ХОББИ
+                            </a>
+                        </li>
+                        <!-- End Blog -->
+
+                        <!-- Contacts -->
+                        <li class="greenhf">
+                            <a >
+                                ПРИКЛЮЧЕНИЯ
+                            </a>
+                        </li>      
+                         <li class="greenhf">
+                            <a >
+                                СТИЛЬ ЖИЗНИ
+                            </a>
+                        </li>                   
+                         <li class="greenhf">
+                            <a >
+                                МОДА
+                            </a>
+                        </li>   
+                         <li class="greenhf">
+                            <a >
+                                ОСОБЫЕ ПОДАРКИ
+                            </a>
+                        </li>     
+                         <li class="greenhf">
+                            <a >
+                                ДЕТЯМ
+                            </a>
+                        </li>         
+                        <!-- End Contacts -->                   
+                      
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>    
+        </div>            
+        <!-- End Navbar -->
+    
    <!--=== Search Block ===-->
-    <div class="search-block parallaxBg">
+    
         <div class="container">
             <div class="col-md-7 col-md-offset-3">
-                <h1>Добро <span class="color-green">пожаловать в дом подарков</span></h1>
+<div class="slidertransparent">
+                <h2 style="color: aliceblue;">ДОБРО <span class="color-green">ПОЖАЛОВАТЬ В ДОМ ПОДАРКОВ</span></h2>
+                     <div class="hr-green"></div>
                 <h4><span class="color-light">Подбирайте и отправляйте подарки друзьям и членам семьи</span></h4>
-                <div class="row" style="opacity: 0.7;">
+                <div class="row plopacity">
                             <section class="col col-md-5">
-                                <select id="Occassion" class="form-control">
+                                <select id="Occassion" class="form-control form-control-transparent">
                                     <option>Поводы</option>
                                     <option>День рождения</option>
                                     <option>Годовщина</option>
@@ -20,7 +115,7 @@
                                 </select>
                             </section>
                             <section class="col col-md-5">
-                                <select id="Relationship" class="form-control">
+                                <select id="Relationship" class="form-control form-control-transparent">
                                     <option>Кем вам приходится получатель…</option>
                                     <option>Брат</option>
                                     <option>Член семьи</option>
@@ -29,27 +124,28 @@
                                     <option>Парень</option>
                                 </select>
                             </section>
-                            <div class="input-group">
-                            <span class="input-group-btn">
-                                <button onclick="searchFromSelection()" class="btn-u" type="button"><i class="fa fa-search"></i></button>
+                            <span class="input-group-btn" style="height: 32px; width: 40px;">
+                                <button onclick="searchFromSelection()" class="btn-u rounded" type="button"><i class="fa fa-search"></i></button>
                             </span>
-                        </div>
                         </div>
                         
                 <h6>
                     <span class="color-light">Более 8 тысяч вариантов подарков, от чашек для кофе 
-                    <span class="color-green">до товаров домашнего обихода, продуктов и даже автомобилей.</span>
+                    <span class="color-green">до товаров домашнего обихода,</span> продуктов и даже автомобилей.</span>
                 </h6>
             </div>
         </div>    
-    </div><!--/container-->     
+</div>
+    </div><!--/container-->   
+  
     <!--=== End Search Block ===-->
-
+  <div class="parallaxBgWhitebox"></div>
     <!--=== Content ===-->
     <div class="container content">
         <!-- Begin Service Block -->
                <div class="title-box-v2">
             <h1><b>Как это работает</b></h1>
+ <div class="hr-green"></div>
             <p>Благодаря нам покупать подарки стало просто</p>
         </div>
         <div class="row margin-bottom-40">
@@ -58,53 +154,45 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x color-green"></i>
-                                    <i class="fa fa-pencil fa-stack-1x color-light"></i>
-                                </span>
+                                <img src="{% static 'assets/img/sliders/greenpencil.png'%}">
                                 <h4>
                                     <strong>Создать подарок</strong>
                                 </h4>
                                 <p>Выберите продукт / категорию из нашей огромной базы данных купцов / магазине<br>All in your fingertips.</p>
+                                    <div class="hr-green"></div>
                                 <a href="#" class="btn btn-dark" target="_blank">Начните искать и отправлять подарки </a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x color-green"></i>
-                                    <i class="fa fa-truck fa-stack-1x color-light"></i>
-                                </span>
+                                <img src="{% static 'assets/img/sliders/greentruck.png'%}">
                                 <h4>
                                     <strong>Выберите метод доставки</strong>
                                 </h4>
                                 <p>Отправьте код по СМС, электронной почте или же распечатайте его. Lorem ipsum dolor sit amet et consectetur.</p>
-                                <a href="#" class="btn btn-dark" target="_blank">Узнать больше о доставке подарков</a>
+                                 <div class="hr-green"></div>
+                                   <a href="#" class="btn btn-dark" target="_blank">Узнать больше о доставке подарков</a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x color-dark-green"></i>
-                                    <i class="fa fa-money fa-stack-1x color-light"></i>
-                                </span>
+                                 <img src="{% static 'assets/img/sliders/greenmoney.png'%}">
                                 <h4>
-                                    <strong>Оплатить</strong>
+                                    <strong style="color: #37b36b;">Оплатить</strong>
                                 </h4>
                                 <p>Оплачивайте с помощью кредитной карты (это на 100% безопасно). Lorem ipsum dolor sit amet et consectetur.</p>
-                                <a href="#" class="btn btn-dark" target="_blank">Узнать больше о методах оплаты</a>
+                                 <div class="hr-darkgreen"></div>
+                                    <a href="#" class="btn btn-dark" target="_blank" style="color: #37b36b;">Узнать больше о методах оплаты</a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x color-green"></i>
-                                    <i class="fa fa-send-o fa-stack-1x color-light"></i>
-                                </span>
+                                 <img src="{% static 'assets/img/sliders/greenroket.png'%}">
                                 <h4>
                                     <strong>Отправить!</strong>
                                 </h4>
                                 <p>Система Like Gift обеспечит получение подарка адресатом. А затем получатель сам вам расскажет, как сильно ему понравился подарок.</p>
+                                 <div class="hr-green"></div>
                                 <a href="" class="btn btn-dark">Узнать больше о получении подарка</a>
                             </div>
                         </div>
@@ -119,17 +207,17 @@
 
 
       <!--=== Download Block ===-->
-    <div class="purchase">
+    <div class="purchase parallaxBggift parallaxBg">
         <div class="container">
             <div class="row">
                 <div class="col-md-9 animated fadeInLeft">
                     <span>Скидки 60% - время летней распродажи!</span>
-                   <!--  <hr class="small"> -->
+                   <div class="hr-white"></div>
                     <p>Маркетинговый слоган. Хватайте, пока горячо!  Like Gift часто предлагает сезонные скидки.
                         <br>Регистрация занимает всего минуту. Lorem ipsum dolor sit amet.</p>
                 </div>            
                 <div class="col-md-3 btn-buy animated fadeInRight">
-                    <a href="/usersignup" class="btn-u btn-u-lg btn-u-light-green"><i class="fa fa-sign-in"></i> Зарегистрироваться</a>
+                    <a href="/usersignup" class="btn-u btn-u-lg btn-white" style="border: solid 2px #fff;"><i class="fa fa-sign-in"></i> Зарегистрироваться</a>
                 </div>
             </div>
         </div>
@@ -141,11 +229,12 @@
 
 
     <!--=== Container Part ===-->
+<div class="yellowbg">
     <div class="container content margin-bottom-20">
         <div class="col-md-3">
-        <div class="title-box-v2">
-            <h2>Популярные категории <p> искать подарки по категориям</p></h2>
-            <hr class="small">
+        <div class="title-box-v2" style="text-align: left;">
+            <h4>Популярные категории <p> искать подарки по категориям</p></h4>
+             <div class="hr-green" style="margin-bottom: 8px;  margin-left: 0px;"></div>
             <p>Доступны более 2000 товаров.  Lorem ipsum dolor sit amet. Конечно, можно отложить все до завтра, но это самое завтра никогда не наступает. Поэтому просматривайте товары и хватайте, что нравится, пока еще есть время! ,<br><a href="#">browse all</a></p>
         </div>
     </div>
@@ -155,7 +244,7 @@
                         <!-- <div class="thumbnail"> -->
                             <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
                                 <span class="overlay-zoom">  
-                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img1.png' %}" alt="" />
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img1.png' %}" alt="" style="margin: auto;" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
                             </a>                 
@@ -169,7 +258,7 @@
                         <!-- <div class="thumbnail"> -->
                             <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
                                 <span class="overlay-zoom">  
-                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt=""  style="margin: auto;" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
                             </a>                   
@@ -183,7 +272,7 @@
                         <!-- <div class="thumbnail"> -->
                             <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
                                 <span class="overlay-zoom">  
-                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img3.png' %}" alt="" />
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img3.png' %}" alt=""  style="margin: auto;" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
                             </a>                     
@@ -197,7 +286,7 @@
                         <!-- <div class="thumbnail"> -->
                             <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
                                 <span class="overlay-zoom">  
-                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt=""  style="margin: auto;" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
                             </a>                     
@@ -211,7 +300,7 @@
                         <!-- <div class="thumbnail"> -->
                             <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
                                 <span class="overlay-zoom">  
-                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt=""  style="margin: auto;" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
                             </a>                     
@@ -225,7 +314,7 @@
                         <!-- <div class="thumbnail"> -->
                             <a class="fancybox-button zoomer" data-rel="fancybox-button" title="Project #2" href="{% static 'assets/img/top_categories/img2.png' %}">
                                 <span class="overlay-zoom">  
-                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt="" />
+                                    <img class="img-responsive img-circle" src="{% static 'assets/img/top_categories/img2.png' %}" alt=""  style="margin: auto;" />
                                     <span class="zoom-icon"></span>                   
                                 </span>                                              
                             </a>                       
@@ -238,30 +327,31 @@
                 </div><!--/row-->
     </div>
          </div><!--/container-->
+</div>
               <!--=== Download Block ===-->
     <div class="search">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 animated fadeInLeft">
                     <span>Самые популярные поисковые запросы</span>
-                   <!--  <hr class="small"> -->
+                   <div class="hr-green" style="margin: 0px;"></div>
                     <p>происходит сейчас</p>
                 </div>            
-                <div class="col-md-9 btn-buy animated fadeInRight">
+                <div class="col-md-9 btn-buy animated fadeInRight" style="text-align: left;">
                     <!--Inversed and Rounded Buttons-->
                
                 <div class="row brand-page margin-bottom-40">
                     <div class="ladda-btn">
-                        <a rel="shrink" href="/catgift/1" class="btn-u btn-u-dark-green shrink">Lego Marvel PS312<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                         <a rel="shrink" href="/catgift/2" class="btn-u btn-u-dark-green shrink">Одежда12<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                          <a rel="shrink" href="/catgift/3" class="btn-u btn-u-dark-green shrink">Lorem Ipsum12<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                           <a rel="shrink" href="/catgift/4" class="btn-u btn-u-dark-green shrink">Lorem Ipsum<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                            <a rel="shrink" href="/catgift/5" class="btn-u btn-u-dark-green shrink">Lego Marvel PS3<button class="btn-u btn-u-green" type="button"><i class="fa fa-search">12</i></button></a>
-                          <a rel="shrink" href="/catgift/6" class="btn-u btn-u-green shrink">Одежда</a>
-                          <a rel="shrink" href="/catgift/7" class="btn-u btn-u-green shrink">Рыба маска  6K6</a>
-                          <a rel="shrink" href="/catgift/8" class="btn-u btn-u-green shrink">Lorem Ipsum<i class="fa fa-search fa-fw">12</i></a>
-                          <a rel="shrink" href="/catgift/9" class="btn-u btn-u-green shrink">Lego Marvel PS3<button class="btn-u btn-u-dark-green" type="button"><i class="fa fa-search">12</i></button></a>
-                          <a rel="shrink" href="/catgift/10" class="btn-u btn-u-green shrink">Односпальный матрас Airsprung Evanton Memory Single Matress</a>
+                        <a rel="shrink" href="/catgift/1" class="btn-u btn-o-lightgreen shrink btn-o">Lego Marvel PS312<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">12</i></button></a>
+                         <a rel="shrink" href="/catgift/2" class="btn-u btn-o-lightgreen shrink btn-o">Одежда12<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">12</i></button></a>
+                          <a rel="shrink" href="/catgift/3" class="btn-u btn-o-lightgreen shrink btn-o">Lorem Ipsum12<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">12</i></button></a>
+                           <a rel="shrink" href="/catgift/4" class="btn-u btn-o-lightgreen shrink btn-o">Lorem Ipsum<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">12</i></button></a>
+                            <a rel="shrink" href="/catgift/5" class="btn-u btn-o-lightgreen shrink btn-o">Lego Marvel PS3<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">12</i></button></a>
+                          <a rel="shrink" href="/catgift/6" class="btn-u btn-o-lightgreen shrink btn-o">Одежда<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">1k2</i></button></a>
+                          <a rel="shrink" href="/catgift/7" class="btn-u btn-o-lightgreen shrink btn-o">Рыба маска <button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">1k2</i></button></a>
+                          <a rel="shrink" href="/catgift/8" class="btn-u btn-o-lightgreen shrink btn-o">Lorem Ipsum<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">1k2</i></button></a>
+                          <a rel="shrink" href="/catgift/9" class="btn-u btn-o-lightgreen shrink btn-o">Lego Marvel PS3<button class="btn-u btn-o-lightgreen-o btn-o" type="button"><i class="fa fa-search">1k2</i></button></a>
+                          <a rel="shrink" href="/catgift/10" class="btn-u btn-o-lightgreen shrink btn-o">Односпальный матрас Airsprung Evanton Memory Single Matress<button class="btn-u btn-u-green btn-o" type="button"><i class="fa fa-search">1k2</i></button></a>
                     </div>
                 </div>                
                 <!--Inversed and Rounded Buttons-->
@@ -274,42 +364,42 @@
 
     <!--=== Parallax Counter ===-->
     <div class="parallax-counter parallaxBg ">
-<!-- Owl Carousel v2 -->
+<!-- Owl Carousel v2 --> <div class="price-head">Our Top Merchents</div>
                 <div class="owl-carousel-v2 owl-carousel-style-v1 margin-bottom-50">
                    <div class="owl-slider-v2">
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/baderbrau.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/cisco_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/fddw.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/cocacola_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/inspiring.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/aztec_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/ea-canada.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/everyday_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/marianos.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/gamescast_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/bellfield.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/hp_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/national-geographic.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/igneus_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/emirates.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/motogp_grey.png' %}" alt="">
                         </div>
                         <div class="item">
-                            <img class="img-responsive" src="{% static 'assets/img/clients2/co-wheels.png' %}" alt="">
+                            <img class="img-responsive" src="{% static 'assets/img/clients/natural_grey.png' %}" alt="">
                         </div>
                     </div>
 
                     <div class="owl-navigation">
                         <div class="customNavigation">
-                            <a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a>
-                            <a class="owl-btn next-v2"><i class="fa fa-angle-right"></i></a>
+                            <a class="owl-btn rounded-4x prev-v2"><i class="fa fa-angle-left"></i></a>
+                            <a class="owl-btn rounded-4x next-v2"><i class="fa fa-angle-right"></i></a>
                         </div>
                     </div><!--/navigation-->              
                 </div>    

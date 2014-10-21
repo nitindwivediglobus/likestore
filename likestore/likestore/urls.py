@@ -48,6 +48,7 @@ urlpatterns = patterns('',
     url(r'^sendsms', sendsms, name='sendsms'),
     url(r'^testchk', testchk, name='testchk'),
     url(r'^receivegift', receivegift, name='receivegift'),
+    url(r'^getcategories', getcategories, name='getcategories'),
 
 
      # Admin Controllers
@@ -60,11 +61,11 @@ urlpatterns = patterns('',
     url(r'^updateuser', updateuser, name='updateuser'),
     url(r'^deleteuser/(?P<uid>\w{0,2})$', deleteuser, name='deleteuser'),
     url(r'^uploadimage', uploadimage, name='uploadimage'),
-    url(r'^saveimage', saveimage, name='saveimage'),
-    url(r'^myproducts/(?P<cat>\w{0,2})/$', myproducts, name='myproducts'),
+    url(r'^saveproductimage', saveproductimage, name='saveproductimage'),
+    #url(r'^myproducts/(?P<cat>\w{0,2})/$', myproducts, name='myproducts'),
     url(r'^allproducts', allproducts, name='allproducts'),
-    #url(r'^uploadproducts', uploadproducts, name='uploadproducts'),
-    #url(r'^uproducts', uproducts, name='uproducts'),
+    url(r'^uploadproducts', uploadproducts, name='uploadproducts'),
+    url(r'^uploadproductsfile', uploadproductsfile, name='uploadproductsfile'),
     url(r'^oneproduct', oneproduct, name='oneproduct'),
     url(r'^updateproduct', updateproduct, name='updateproduct'),
     url(r'^delproduct/(?P<pid>\w{0,2})$', delproduct, name='delproduct'),
@@ -72,7 +73,6 @@ urlpatterns = patterns('',
     url(r'^oneorder', oneorder, name='oneorder'),
     url(r'^updateorder', updateorder, name='updateorder'),
     url(r'^delorder/(?P<oid>\w{0,2})$', delorder, name='delorder'),
-    url(r'^uploadproductsfile', uploadproductsfile, name='uploadproductsfile'),
 
 
 

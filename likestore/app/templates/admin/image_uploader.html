@@ -14,7 +14,7 @@
 		</div>
 		<div class="qq-upload-button-selector qq-upload-button btn btn-success" style="width: auto;">
 			<div><i class="fa fa-upload icon-white"></i>Upload My Files
-                <form enctype="multipart/form-data" action="/saveimage" method="post">{% csrf_token %}
+                <form enctype="multipart/form-data" action="/saveproductimage" method="post">{% csrf_token %}
                     <input type="file" name="image_files" multiple="true"/>
                     <input type="submit" name="upload" value="Upload">
                 </form>

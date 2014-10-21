@@ -246,3 +246,10 @@ def receivegift(request):
             result = 'NOT AUTHORIZED'
             data = {'result':result}
             return HttpResponse(json.dumps(data), content_type="application/json")
+
+def getcategories(request):
+    if (request.is_ajax()):
+        categories = Productcategories.objects.raw('SELECT * FROM Productcategories')
+        category = serializers.serialize("json",categories)
+        data = {'category': category}
+    return HttpResponse(json.dumps(data), content_type="application/json")

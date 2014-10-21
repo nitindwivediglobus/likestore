@@ -138,7 +138,7 @@
 
 /*FancyBox Hover Effect*/
 .zoomer:hover .overlay-zoom .zoom-icon{
-   opacity:0.4;   
+   opacity:0.9;   
    -webkit-transform: scale(1);
    -moz-transform: scale(1);
    -o-transform: scale(1);
@@ -168,11 +168,12 @@
    width: inherit;
    height: inherit;
    position: absolute;
-   background-color: #56bb81;
+   /*background-color: #56bb81;*/
    background-position: 50%;
    background-repeat: no-repeat;
    background-image:url("../img/overlay-icon.png");
    filter: alpha(opacity = 0);
+   border-radius: 50% !important;
    -webkit-backface-visibility: hidden;
    -webkit-transition: all 0.4s ease-in-out;
    -moz-transition: all 0.4s ease-in-out;
