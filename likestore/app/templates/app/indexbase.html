@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="{% static 'assets/plugins/ladda-buttons/css/custom-lada-btn.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/plugins/hover-effect/css/custom-hover-effects.css' %}">   
     <link rel="stylesheet" href="{% static 'assets/plugins/fancybox/source/jquery.fancybox.css' %}"> 
+     <link rel="stylesheet" href="{% static 'assets/plugins/flexslider/flexslider.css' %}">
 
     <!--[if lt IE 9]>
         <link rel="stylesheet" href="css/sky-forms-ie8.css">
@@ -121,15 +122,16 @@
                     <li>
                         <section class="col col-md-5">
                             <div class="input-group">
-                                <input type="text" id="SearchWord" class="form-control rounded" placeholder="поиск ...">
+                               
                                 <span class="input-group-btn">
-                                    <button  onclick="searchfunction()" class="btn btn-default rounded" type="button"><i class="fa fa-search"></i></button>
+ <input type="text" id="SearchWord" class="form-control rounded" placeholder="поиск ...">
+                                    <button  onclick="searchfunction()" class="btn search-over" type="button"><i class="fa fa-search"></i></button>
                                 </span>
                             </div>
                         </section>
                     </li>
                     <li class="pull-right">
-                        <button class="btn-u btn-brd rounded-3x btn-u-sm" type="button" data-toggle="modal" data-target="#receivegift">
+                        <button class="btn-u btn-brd rounded-3x btn-u-sm" type="button" data-toggle="modal" data-target="#receivegift" style="border: solid 3px #9bdc61;">
                             <span class="badge badge-u rounded-x">3</span>
                             <i class="fa fa-shopping-cart"></i> Мои подарки 
                         </button>
@@ -158,8 +160,8 @@
                                    
                                     <div class="modal-body">
                                         <div class="row">
-                                            <div class="col-md-4" style="background-color: lightgreen;">
-                                                <div class="headline"><h4>Как получить подарок?</h4></div>
+                                            <div class="col-md-4" style="background-color: #72c02c;">
+                                                <h4>Как получить подарок?</h4>
                                            <p  id="Pdescription">Lorem ipsum dolor. Посетите наш веб-сайт и введите ваш подарочный код. Выберите фирму-продавца или бренд желаемого вами подарка. Сгенерируйте подарочный код для выбранного вами бренда и следуйте инструкциям на экране, чобы получить ваш подарок.<br>
                                                 Для ресторанов, спа и хобби необходимо резервирование. Позвоните нам, чтобы сделать резервацию. Не забудьте взять с собой подарочный сертификат выбранного бренда, чтобы им воспользоваться.</p>
                                                 <h6 class="color-green"><i class="fa fa-exclamation-circle fa-1x"></i>нужна помощь?</h6>
@@ -252,7 +254,8 @@
                      <div class="hr-green" style="margin: 0px;"></div> 
                     <form class="footer-subsribe" style="margin-top: 30px;">
                         <div class="input-group">
-                            <input type="text" class="form-control rounded" placeholder="Your Email Address">    
+                            <button class="btn env-over" type="button"><i class="fa fa-envelope-o fa-fw fa-fw"></i></button>
+                            <input type="text" class="form-control rounded" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your email address">    
                         </div>                                          
                             <span class="input-group-btn">
                                 <button class="btn-u btn-u-sm rounded" href="/contact" type="button" style="margin-top: 10px;">Подписаться</button>
@@ -313,7 +316,7 @@
         <div class="container">
             <div class="row">
                  <div class="col-md-6">                      
-                    <p class="copyright-space">
+                    <p class="copyright-space" style="font-size: 10px;line-height: 1.2;">
                         Copyright &copy; 2015 <span class="color-green">Like Gift, Ltd.</span> Все права защищены. 
                     <br>
                     Никакая часть данного веб-сайта не может быть скопирована, дублирована или распространена в какой бы то ни было форме.<br> Используя данный веб-сайт, вы принимаете наши Условия пользования.</p>
@@ -336,6 +339,7 @@
 <script src="{% static 'assets/plugins/owl-carousel/owl-carousel/owl.carousel.js' %}"></script>
 <script src="{% static 'assets/plugins/ladda-buttons/js/spin.min.js' %}"></script>
 <script src="{% static 'assets/plugins/ladda-buttons/js/ladda.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/flexslider/jquery.flexslider.js' %}"></script>
 <!-- JS Page Level -->              
 <script type="text/javascript" src="{% static 'assets/js/pages/feature_btn_effects.js' %} "></script>          
 <script type="text/javascript" src="{% static 'assets/js/app.js' %}"></script>
@@ -398,6 +402,24 @@ function receivegift(){
     });
 }
 </script>
+    <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 210,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 4,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
 <!--[if lt IE 9]>
     <script src="assets/plugins/respond.js"></script>
 <![endif]-->
